@@ -162,7 +162,7 @@
 
     async function getdata() {
         try {
-            let res = await fetch("http://localhost:8000/article")
+            let res = await fetch("https://server.protechplanner.info//article")
             let data = await res.json()
             if (data.message = "welcome to event route") {
                 mapData(data.data)
@@ -223,7 +223,7 @@
 
 
         try {
-            let res = await fetch(`http://localhost:8000/article/delete/${id}`, {
+            let res = await fetch(`https://server.protechplanner.info//article/delete/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'

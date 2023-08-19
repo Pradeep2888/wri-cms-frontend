@@ -428,7 +428,7 @@
         else {
 
             try {
-                let res = await fetch(`http://localhost:8000/article/singlearticle/${token}`)
+                let res = await fetch(`https://server.protechplanner.info//article/singlearticle/${token}`)
                 let data = await res.json()
                 if (data.message = "welcome to event route") {
                     console.log(data.data)
