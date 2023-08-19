@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- CSS Files    -->
+    <link href="../assets/css/animate.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/fonts/fonts.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../Events/style/singleevent.css" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google font Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+
+
+
+
+
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+    <!-- ======= Header ======= -->
+    <header class="header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <!--top-bar-->
+            <div class="container-fluid top-bar-sec">
+                <div class="container top-bar">
+                    <div class="row">
+                        <div class="col-lg-9 pl-0 textop pt-0">
+                            <a href='/' style='text-decoration: none;'>
+                                <h2 class="apcb">SUSTAINABLE ENERGY<br> TRANSFORMATION <span>A WRI India
+                                        Initiative</span>
+                                </h2>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29.395" height="29.4"
+                                viewBox="0 0 29.395 29.4">
+                                <path id="Icon_awesome-search" data-name="Icon awesome-search"
+                                    d="M29,25.418l-5.724-5.724a1.377,1.377,0,0,0-.976-.4h-.936a11.937,11.937,0,1,0-2.067,2.067v.936a1.377,1.377,0,0,0,.4.976L25.418,29a1.372,1.372,0,0,0,1.946,0l1.625-1.625A1.384,1.384,0,0,0,29,25.418ZM11.943,19.292a7.349,7.349,0,1,1,7.349-7.349A7.345,7.345,0,0,1,11.943,19.292Z"
+                                    fill="#fff" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--top-bar-->
+
+            <!--top-middle-bar-->
+            <div class="container-fluid tg cotm">
+                <div class="container pt-0">
+                    <div class="row">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle btn-dp" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Tamil Nadu<img class="arrowtop" src="../images/arrownew.png">
+                            </button>
+
+                            <div class="dropdown-menu full-w" aria-labelledby="dropdownMenuButton">
+                                <a class='dropdown-item dp-link' href='/'><span class="all"> All
+                                        States</span></a>
+                                <a class='dropdown-item dp-link' href='/kerala'><span class="kerala">Kerala</span></a>
+                                <a class='dropdown-item dp-link' href='/rajasthan'><span class="rajasthan">
+                                        Rajasthan</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navbar -->
+            <!-- Navbar -->
+            <div class="container pt-0">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle">
+                            type="button">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar-collapse-02" class="navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li style="padding-left:8px;"><a class='nav-link' href='/'
+                                    style='padding-left:5px;'>Home</a>
+                            </li>
+                            <li><a class='nav-link' href='/aboutus'>About Us</a></li>
+                            <li><a class="dropbtn nav-link" href="#">Thematic Acess</a></li>
+                            <li class="dropdown">
+                                <a class='dropbtn nav-link' href='/resources'>Resources
+
+                                </a>
+
+
+                            </li>
+                            <li><a class='nav-link nav-link-active' href='/events'>Events</a></li>
+                            <li><a class="nav-link" href="#">Data</a></li>
+                            <li><a class='nav-link' href='/contact-us'>Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+        <!--navbar -->
+        <!--top-bar-->
+        <div class="mobile">
+            <div class="container-fluid top-bar-mob">
+                <div class="container top-bar-mob">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <a href='/' style='text-decoration: none;'>
+                                <h2 class="apcb">SUSTAINABLE ENERGY<br> TRANSFORMATION
+                                </h2>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29.395" height="29.4"
+                                viewBox="0 0 29.395 29.4">
+                                <path id="Icon_awesome-search" data-name="Icon awesome-search"
+                                    d="M29,25.418l-5.724-5.724a1.377,1.377,0,0,0-.976-.4h-.936a11.937,11.937,0,1,0-2.067,2.067v.936a1.377,1.377,0,0,0,.4.976L25.418,29a1.372,1.372,0,0,0,1.946,0l1.625-1.625A1.384,1.384,0,0,0,29,25.418ZM11.943,19.292a7.349,7.349,0,1,1,7.349-7.349A7.345,7.345,0,0,1,11.943,19.292Z"
+                                    fill="#fff" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--top-bar-->
+            <div class="container-fluid top-bar-mob-last-tamil">
+                <div class="row" style="margin-left: 14px !important;">
+                    <div class="col-sm-5 mbn">
+                        <button class="btn dropdown-toggle btn-dp" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style="display:flex; padding-left:0px; flex-direction:row; align-items: center;">
+                            Tamil Nadu<svg xmlns="http://www.w3.org/2000/svg" width="23.616" height="13.503"
+                                viewBox="0 0 23.616 13.503" class="arrowtop">
+                                <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down"
+                                    d="M18,20.679l8.93-8.937a1.681,1.681,0,0,1,2.384,0,1.7,1.7,0,0,1,0,2.391L19.2,24.258a1.685,1.685,0,0,1-2.327.049L6.68,14.14a1.688,1.688,0,0,1,2.384-2.391Z"
+                                    transform="translate(-6.188 -11.246)" fill="#fff" />
+                            </svg>
+                        </button>
+
+                        <div class="dropdown-menu full-w" aria-labelledby="dropdownMenuButton">
+                            <a class='dropdown-item dp-link' href='/'><span class="all"> All
+                                    States</span></a>
+                            <a class='dropdown-item dp-link' href='/kerala'><span class="kerala">Kerala</span></a>
+                            <a class='dropdown-item dp-link' href='/rajasthan'><span class="rajasthan">
+                                    Rajasthan</span></a>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-5 mbn">
+                        <!-- Trigger/Open The Modal -->
+                        <button id="myBtn"><i class="fa fa-bars"></i></button>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+
+                                <ul class="nav navbar-nav">
+                                    <li style="padding-left:0;"><a class='nav-link1' href='/'>Home</a></li>
+                                    <li><a class='nav-link1' href='/aboutus'>About Us</a></li>
+                                    <li><a class="nav-link1" href="#">Thematic Acess</a></li>
+                                    <li><a class='nav-link1' href='/resources'>Resources</a></li>
+                                    <li><a class='nav-link1' href='/events'>Events</a></li>
+                                    <li><a class="nav-link1" href="#">Data</a></li>
+                                    <li><a class='nav-link1' href='/contact-us'>Contact Us</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--navbar -->
+    </header>
+    <!--end header -->
+
+
+
+
+
+
+
+
+
+    <!-- **** Single Events Navbar Start  **** -->
+
+    <section class="container_singel_event_nav">
+        <div class="area_single_event_nav" style="display: flex;">
+            <a>
+                <div class="nav_single_event_row1">
+
+                    <img class="nav_single_event_row1_icon" src="./assete/circle-arrow-left-solid.svg" />
+
+                </div>
+                <div class="nav_single_event_row2">
+                    <p>Events</p>
+                </div>
+            </a>
+            <div><button onclick="openModal('edit')">Upload Image</button></div>
+            <div><button>Publish Event</button></div>
+        </div>
+
+
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h3>Edit Date And Time</h3>
+                <input type="file" id="imageUpload" accept=".png" />
+                <div style="display: flex;">
+                    <button class="action-button" onclick="updateImage()">Save</button>
+                    <button class="action-button" onclick="closeModal()">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <!-- **** Single Events Navbar Ends **** -->
+
+
+
+    <!-- **** Single Events  body start **** -->
+
+    <section class="body_container">
+        <div class="body_area">
+
+            <section class="body_row1">
+                <div class="body_headingbox">
+                    <h1 class="body_heading"></h1>
+                </div>
+
+                <div class="single_event_body_para">
+
+                </div>
+
+                <div class="single_event_body_vedio_heading_top">
+
+                    <div class="single_event_body_vedio_heading">
+                        <div>
+                            <p>Report:</p>
+                        </div>
+                        <div class="report_url">
+
+                        </div>
+                    </div>
+
+                    <div class="single_event_body_vedio_heading_link">
+                        <div>
+                            <p>Vedio:</p>
+                        </div>
+                        <div class="video_url">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="single_event_body_vedio">
+
+
+
+                </div>
+
+            </section>
+
+
+
+
+
+            <section class="single_event_body_row2">
+
+                <div>
+                    <div class="single_event_body_row2_icon"><img src="./assete/calendar-days-regular.svg"
+                            alt="location" /></div>
+                    <div class="single_event_body_row2_detail">
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="single_event_body_row2_icon"><img src="./assete/clock-regular.svg" alt="location" />
+                    </div>
+                    <div class="time">
+
+                    </div>
+                </div>
+
+                <div>
+                    <div class="single_event_body_row2_icon"><img src="./assete/location-dot-solid.svg"
+                            alt="location" /></div>
+                    <div class="location">
+
+                    </div>
+                </div>
+
+                <div>
+                    <a class="download_agenda" target="_blank">
+                        <button class="single_event_download_agenda">
+                            <div>
+                                <p> Download Agenda</p>
+                            </div>
+                            <div><img src="./assete/Icon feather-download.png" alt="Download_icon" /></div>
+                        </button>
+                    </a>
+                </div>
+
+                <hr class="horizontal_line" />
+
+                <div class="single_event_body_row2_inquery">
+                    <p>Inquiries</p>
+                </div>
+
+                <div class="single_event_body_row2_mail_box">
+
+                </div>
+
+            </section>
+
+        </div>
+    </section>
+
+    <!-- **** Single Events body start **** -->
+
+
+
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container-fluid" style="background-color:#122034;padding:30px0px;">
+            <div class="container">
+                <div class="row footertop">
+
+                    <div class="col-lg-3">
+                        <h2>CONTACT INFO</h2>
+                        <p class="pt-4">For any inquiries, questions or<br> commendations, Please Contact</p>
+                        <p>Ahona Datta Gupta <br> Email: ahona.dattagupta@wri.org</p>
+                    </div>
+                    <hr id="mfoothor" class="laphide" style="color: white;
+                max-width: 91%;
+                margin: 35px 6px;">
+
+                    <div class="col-lg-5 mobhide" id="footpart2">
+                        <h2> IMPORTANT LINKS</h2>
+                        <ul class="list1">
+                            <li style="color: #fff"> <a>Home</a></li>
+                            <li style="color: #fff"> <a>Resources</a></li>
+                            <li style="color: #fff"> <a>Events</a></li>
+                        </ul>
+                        <ul class="list2">
+                            <li style="color: #fff"> <a>Data</a></li>
+                            <li style="color: #fff"> <a>About Us</a></li>
+                            <li style="color: #fff"> <a>Contact Us</a></li>
+                        </ul>
+                        <ul class="list3">
+                            <li style="color: #fff"> <a>Tamil Nadu</a></li>
+                            <li style="color: #fff"> <a>Rajasthan</a></li>
+                            <li style="color: #fff"> <a>Kerala</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-5 laphide tabhide" id="footlinks">
+                        <h2> IMPORTANT LINKS</h2>
+                        <ul class="list1">
+                            <li style="color: #fff"> <a>Home</a></li>
+                            <li style="color: #fff"> <a>Resources</a></li>
+                            <li style="color: #fff"> <a>Events</a></li>
+                            <li style="color: #fff"> <a>Data</a></li>
+                            <li style="color: #fff"> <a>About Us</a></li>
+                            <li style="color: #fff"> <a>Contact Us</a></li>
+                            <li style="color: #fff"> <a>Tamil Nadu</a></li>
+                            <li style="color: #fff"> <a>Rajasthan</a></li>
+                            <li style="color: #fff"> <a>Kerala</a></li>
+                        </ul>
+                    </div>
+
+                    <hr id="mfoothor" class="laphide" style="color: white;
+                max-width: 91%;
+                margin: 35px 6px;">
+
+                    <div class="col-lg-3" id="footform">
+                        <h2> WRITE TO US </h2>
+                        <div class="formfooter">
+                            <input class="form-control form-control-lg" type="text" max-length="5" placeholder="">
+                        </div>
+
+                        <ul class="footer_social" style="display: flex; justify-content: space-between;">
+                            <li><a><i class='bx bxl-facebook'></i></a></li>
+                            <li><a><i class='bx bxl-instagram'></i></a></li>
+                            <li><a><i class='bx bxl-twitter'></i></a></li>
+                            <li><a><i class='bx bxl-youtube'></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mobhide tabhide" style="background-color:#ffffff;padding:36px 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright" style="display: flex; flex-direction:row;">
+                            <p><img src="../assets/img/logo.png" alt=""></p>
+                            <p><img src="../assets/img/logo2.png" alt=""></p>
+                            <p><img src="../assets/img/logo3.png" alt=""></p>
+                            <p><img src="../assets/img/logo4.png" alt=""></p>
+                            <p><img src="../assets/img/logo5.png" alt=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid laphide" style="background-color:#ffffff;padding:36px 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright footlogo">
+                            <p><img src="../assets/img/logo.png" alt=""></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid" style="background-color:#f0ab00;padding:6px 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright">
+                            <p>© COPYRIGHT 2020.ALL RIGHT RESERVED. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<script>
+
+    async function getdata() {
+
+
+        let token = JSON.parse(localStorage.getItem("singleevent")) || ""
+        if (token === undefined) {
+            window.location.href = "./event_dashboard.html"
+        }
+        else {
+
+            try {
+                let res = await fetch(`http://localhost:8000/event/singleevent/${token}`)
+                let data = await res.json()
+                if (data.message = "welcome to event route") {
+                    mapData(data.data)
+                }
+                else {
+                    alert("Something wrong please try again")
+                }
+            }
+            catch (err) {
+                console.log(err)
+            }
+
+        }
+
+    }
+    getdata()
+
+
+
+
+
+    function mapData(data) {
+        let hadding = document.getElementsByClassName("body_heading")[0].innerHTML = data.heading
+        let discription = data.discription
+
+        discription.forEach((value, pointer) => {
+            var para = value.text
+
+            value.inputsAndCheckboxes.forEach((value, index) => {
+                if (value.word !== "" && value.url !== "" && value.yellow === true && value.black === false) {
+                    let a = yellowheighlightwithurl(discription[pointer].text, value.word, value.url)
+                    discription[pointer].text = a
+                }
+                else if (value.word !== "" && value.url !== "" && value.yellow === false && value.black === true) {
+                    let a = blackheighlightwithurl(discription[pointer].text, value.word, value.url)
+                    discription[pointer].text = a
+                }
+                else if (value.word !== "" && value.url === "" && value.yellow === true && value.black === false) {
+                    let a = yellowheighlight(discription[pointer].text, value.word, value.url)
+                    discription[pointer].text = a
+                }
+                else if (value.word !== "" && value.url === "" && value.yellow === false && value.black === true) {
+                    let a = blackheighlight(discription[pointer].text, value.word, value.url)
+                    discription[pointer].text = a
+                }
+                else if (value.word === "" && value.url === "" && value.yellow === true && value.black === false) {
+                    let a = yellowpara(discription[pointer].text)
+                    discription[pointer].text = a
+                }
+                else if (value.word === "" && value.url === "" && value.yellow === false && value.black === true) {
+                    let a = blackpara(discription[pointer].text)
+                    discription[pointer].text = a
+                }
+                else if (value.word === "" && value.url === "" && value.yellow === false && value.black === false) {
+                    let a = simplepara(discription[pointer].text)
+                    discription[pointer].text = a
+                }
+
+            })
+
+        })
+
+
+
+
+
+
+        function yellowheighlight(para, word, url) {
+
+
+            var totalindex = []
+            var para1 = para.trim().split(" ")
+            var word1 = word.trim().split(" ")
+            var index = []
+            function reduce() {
+
+
+                let i = 0
+                let j = 0
+                while (i < para1.length) {
+                    if (para1[i] === word1[j]) {
+                        index.push(i)
+                        i++
+                        j++
+                        if (word1.length === index.length) {
+                            totalindex.push(index)
+                            i++
+                            j = 0
+                            index = []
+                            break;
+                        }
+
+                    }
+                    else {
+                        i++
+                        j = 0
+                        index = []
+                    }
+                }
+            }
+            reduce()
+
+
+            for (let i = 0; i < totalindex.length; i++) {
+                para1.splice(totalindex[i][0], totalindex[i].length, `<strong style="color: #F0AB00;" >${word}</strong>`)
+                reduce()
+            }
+
+            return para1.join(" ")
+
+        }
+
+
+
+
+
+
+
+
+
+        function yellowheighlightwithurl(para, word, url) {
+            var totalindex = []
+            var para1 = para.trim().split(" ")
+            var word1 = word.trim().split(" ")
+            var index = []
+            function reduce() {
+
+
+                let i = 0
+                let j = 0
+                while (i < para1.length) {
+                    if (para1[i] === word1[j]) {
+                        index.push(i)
+                        i++
+                        j++
+                        if (word1.length === index.length) {
+                            totalindex.push(index)
+                            i++
+                            j = 0
+                            index = []
+                            break;
+                        }
+
+                    }
+                    else {
+                        i++
+                        j = 0
+                        index = []
+                    }
+                }
+            }
+            reduce()
+
+
+            for (let i = 0; i < totalindex.length; i++) {
+                para1.splice(totalindex[i][0], totalindex[i].length, `<a href="${url}" style="color: #F0AB00;">${word}</a>`)
+                reduce()
+            }
+
+            return para1.join(" ")
+
+
+        }
+
+
+
+
+
+
+
+
+
+        function blackheighlight(para, word, url) {
+            var totalindex = []
+            var para1 = para.trim().split(" ")
+            var word1 = word.trim().split(" ")
+            var index = []
+            function reduce() {
+
+
+                let i = 0
+                let j = 0
+                while (i < para1.length) {
+                    if (para1[i] === word1[j]) {
+                        index.push(i)
+                        i++
+                        j++
+                        if (word1.length === index.length) {
+                            totalindex.push(index)
+                            i++
+                            j = 0
+                            index = []
+                            break;
+                        }
+
+                    }
+                    else {
+                        i++
+                        j = 0
+                        index = []
+                    }
+                }
+            }
+            reduce()
+
+
+            for (let i = 0; i < totalindex.length; i++) {
+                para1.splice(totalindex[i][0], totalindex[i].length, `<strong>${word}<strong>`)
+                reduce()
+            }
+
+            return para1.join(" ")
+
+        }
+
+
+
+
+
+
+
+
+
+        function blackheighlightwithurl(para, word, url) {
+            var totalindex = []
+            var para1 = para.trim().split(" ")
+            var word1 = word.trim().split(" ")
+            var index = []
+            function reduce() {
+
+
+                let i = 0
+                let j = 0
+                while (i < para1.length) {
+                    if (para1[i] === word1[j]) {
+                        index.push(i)
+                        i++
+                        j++
+                        if (word1.length === index.length) {
+                            totalindex.push(index)
+                            i++
+                            j = 0
+                            index = []
+                            break;
+                        }
+
+                    }
+                    else {
+                        i++
+                        j = 0
+                        index = []
+                    }
+                }
+            }
+            reduce()
+
+
+            for (let i = 0; i < totalindex.length; i++) {
+                para1.splice(totalindex[i][0], totalindex[i].length, `<a href="${url}" style="font-weight:bold;color: #000000;">${word}</a>`)
+                reduce()
+            }
+
+            return para1.join(" ")
+        }
+
+
+        function yellowpara(para) {
+            let newPara = `<strong style="color: #F0AB00;"  >${para}</strong>`
+            return newPara
+        }
+        function blackpara(para) {
+            let newPara = `<strong>${para}</strong>`
+            return newPara
+        }
+
+        function simplepara(para) {
+            let newPara = `${para}`
+            return newPara
+        }
+
+
+
+        discription.forEach((value, index) => {
+            let newPara = `<p>${value.text}</p>`
+            let paragraph = document.getElementsByClassName("single_event_body_para")[0]
+            paragraph.insertAdjacentHTML('beforeend', newPara);
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let report_url = document.getElementsByClassName("report_url")[0]
+        data.report_url.forEach((value, index) => {
+            let tag = document.createElement("a")
+            tag.innerText = value
+            tag.href = value
+
+            report_url.appendChild(tag)
+        })
+
+
+        let video_url = document.getElementsByClassName("video_url")[0]
+        data.video_url.forEach((value, index) => {
+            let tag = document.createElement("a")
+            tag.innerText = value
+            tag.href = value
+
+            video_url.appendChild(tag)
+        })
+
+
+        let video_box = document.getElementsByClassName("single_event_body_vedio")[0]
+        data.video_url.forEach((value, index) => {
+            let newFrame = `
+    <div >
+        <iframe
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen="" frameborder="0" src=${value}
+            style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;border:none;overflow:hidden">
+        </iframe>
+    </div>
+    `;
+            crossOrigin = "annonemous"
+
+            video_box.insertAdjacentHTML('beforeend', newFrame);
+        });
+
+
+
+        let date = document.getElementsByClassName("single_event_body_row2_detail")[0]
+        const inputDate = data.date;
+        const parsedDate = new Date(inputDate);
+        const months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        const formattedDate = `${parsedDate.getDate()} ${months[parsedDate.getMonth()]} ${parsedDate.getFullYear()}`;
+        let newDate = `<p>${formattedDate}</p>`
+        date.innerHTML = newDate
+
+
+
+        let time = document.getElementsByClassName("time")[0]
+        let newTime = `<p>${data.start_time
+            } am - ${data.end_time} pm</p>`
+        time.innerHTML = newTime
+
+
+
+        let location = document.getElementsByClassName("location")[0]
+        let newlocation = `<p>${data.place}</p>`
+        location.innerHTML = newlocation
+
+
+        let agenda_url = document.getElementsByClassName("download_agenda")[0]
+        agenda_url.href = data.agenda_url
+
+        let management = document.getElementsByClassName("single_event_body_row2_mail_box")[0]
+        data.event_manager.forEach((value, index) => {
+            let newInquirey = `
+                   <p class="single_event_body_row2_mail_heading1">${value.name}</p>
+                    <p class="single_event_body_row2_mail">${value.email}</p>
+                    <p class="single_event_body_row2_mail">${value.phone === null ? "" : value.phone}</p>
+            `
+            management.insertAdjacentHTML('beforeend', newInquirey);
+        })
+
+
+
+
+    }
+
+
+
+
+
+
+    // ______________Modal_______________________
+
+    function closeModal() {
+        var modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+
+
+
+    function openModal(action) {
+        var modal = document.getElementById("modal");
+        var modalMessage = document.getElementById("modal-message");
+
+        switch (action) {
+            case "edit":
+                break;
+        }
+
+        modal.style.display = "flex";
+    }
+
+
+
+
+    document.getElementById('imageUpload').addEventListener('change', function (e) {
+        var file = e.target.files[0];
+
+        if (file.type !== 'image/png') {
+            alert('Only PNG images are allowed!');
+            e.target.value = '';
+        } else {
+            var img = new Image();
+
+            img.onload = function () {
+                var width = this.width;
+                var height = this.height;
+
+                if (width !== 1088 && height !== 681) { // replace 500 with your desired width and height
+                    alert(`The image size must be 681x1088! and this image height is ${height} and width is ${width} `);
+                    e.target.value = '';
+                }
+            };
+
+            img.src = URL.createObjectURL(file);
+        }
+    });
+
+
+
+    function updateImage() {
+        var input = document.querySelector('input[type="file"]')
+
+        var data = new FormData()
+        data.append('image', input.files[0])
+
+
+
+
+        fetch('http://localhost:8000/event/upload', {
+            method: 'POST',
+            body: data
+        })
+            .then(response => response.json())
+            .then(result => {
+                console.log('Success:', result);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            })
+
+
+
+    }
+
+
+
+
+</script>

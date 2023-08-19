@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event From Addition</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 10px;
+        padding: 40px;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        text-align: center;
+        color: #000000;
+        background-color: #d6ab36;
+        border: 2px solid #000000;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+
+      button {
+        margin-top: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #000000;
+      }
+
+      .form-title {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .button-group {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .button-group button {
+        margin-left: 10px;
+        padding: 8px 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .button-group button:last-child {
+        background-color: #dc3545;
+      }
+
+      /* Styling for each form option */
+      .addevent,
+      .managers,
+      .speakers,
+      .description,
+      .video,
+      .reports,
+      .state,
+      .image,
+      .eventclass,
+      .agenda {
+        border: 2px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      .addevent .form-label {
+        color: #000000;
+      }
+
+      .form-title {
+        margin-bottom: 0px;
+      }
+
+      .form-input-icon {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: #007bff;
+        border-radius: 50%;
+        margin-left: 5px;
+      }
+
+      /* Custom styling for buttons */
+      .add-btn,
+      .remove-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+
+      .remove-btn {
+        background-color: #dc3545;
+        margin-left: 5px;
+      }
+
+      button.form-button {
+        background-color: #4CAF50;
+        color: #fff;
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        border: 2px solid #4CAF50;
+        border-radius: 10px;
+      }
+
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      .btn {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      .center-align {
+        text-align: center;
+      }
+
+      td>input {
+        width: 70%;
+      }
+
+      td>textarea {
+        width: 99%;
+        height: 5rem;
+      }
+
+      td.para {
+        width: 50%;
+      }
+
+      input.text {
+        width: 95%;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <!-- Initial form option -->
+
+
+    <!-- <form> -->
+    <h1 class="title">Add Event Details</h1>
+
+
+
+    <div class="state">
+      <h2 class="form-title">Event State</h2>
+      <div class="form-group">
+        <label for="state_select">Select State:</label>
+        <select id="state_select" name="event_state" class="form-input">
+          <option value="">All State</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Rajasthan">Rajasthan</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="state">
+      <h2 class="form-title">Event Filter By type</h2>
+      <div class="form-group">
+        <label for="state_select">Select Event Type       :</label>
+        <select name="event" id="event_filter">
+          <option value="Agricultural Transitions">Agricultural Transitions</option>
+          <option value="Industrial and Commercial Transitions">Industrial and Commercial Transitions</option>
+          <option value="Residential Transition">Residential Transition</option>
+        </select>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="addevent form-group">
+      <label for="event_name" class="form-label">Heading:</label>
+      <input type="text" class="form-input heading">
+
+      <div class="data">
+        <label for="event_date" class="form-label">Date:</label>
+        <input type="date" class="form-input date">
+
+        <label for="start_time" class="form-label">Starting Time:</label>
+        <input type="time" class="form-input starttime">
+
+      </div>
+
+      <div class="data">
+        <label for="end_time" class="form-label">Ending Time:</label>
+        <input type="time" class="form-input endtime">
+
+        <label for="event_name" class="form-label">Venue:</label>
+        <input type="text" class="form-input place">
+      </div>
+
+
+
+    </div>
+
+
+    <div class="description">
+      <h1>Event Manager</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="dataRows">
+          <tr>
+            <td><input type="text" name="name"></td>
+            <td><input type="email" name="email"></td>
+            <td><input type="number" name="phone"></td>
+            <td><button class="btn" onclick="deleteRow(this)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn" onclick="addRow()">Add Row</button>
+    </div>
+
+    <div class="reports">
+      <h1>Event Reports</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Report URL</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="dataRowsSection2">
+          <tr>
+            <td><input type="url" name="fieldSection2[]"></td>
+            <td><button class="btn" onclick="deleteRowSection2(this)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn" onclick="addRowSection2()">Add Row</button>
+    </div>
+
+    <div id="reports-container"></div>
+
+
+    <div class="video">
+      <h1>Event Video</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Video</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="dataRowsSection3">
+          <tr>
+            <td><input type="text" name="fieldSection2[]"></td>
+            <td><button class="btn" onclick="deleteRowSection3(this)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn" onclick="addRowSection3()">Add Row</button>
+    </div>
+
+  
+
+
+
+
+
+    <section class="newDiscription" >
+      <div class="agenda" >
+        <h1>Event Discription</h1>
+      <table class="pradeeptable" >
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+        <tr>
+          <td><textarea placeholder="Text Area"></textarea></td>
+          <td class="pradeep">
+            <div class="pradeep-inputarea">
+              <div class="pradeep-input-group">
+                  <label>Word</label>
+                <input type="text" placeholder="Input 1">
+                <label>Url</label>
+                <input type="url" placeholder="Input 2">
+                <label>Yellow Highlight</label>
+                <input type="checkbox">
+                <label>Black Highlight</label>
+                <input type="checkbox">
+              </div>
+            </div>
+            <button onclick="pradeepAddInputField(this)">Add Input</button>
+            <button onclick="pradeepDeleteInputField(this)">Delete Input</button>
+          </td>
+          <td>
+            <button onclick="pradeepAddDeleteRow(this)">Add Row</button>
+            <button onclick="pradeepDeleteRow(this)">Delete Row</button>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+      
+      </section>
+
+
+
+
+
+    
+
+    <div class="agenda">
+      <h2 class="form-title">Download Agenda</h2>
+      <div class="form-group">
+        <label for="video-url_1">Agenda URL:</label>
+        <input type="text" id="agenda-url" name="video_url" class="video-input" placeholder="Agenda URL">
+      </div>
+    </div>
+
+    <div id="agenda-container"></div>
+
+
+
+
+
+    <div class="button">
+      <button type="submit" onclick="collectFormData()" class="form-button">Submit</button>
+    </div>
+
+    <!-- </form> -->
+
+  </body>
+
+</html>
+
+
+
+
+<script>
+
+
+window.onload = function() {
+    let token=JSON.parse(localStorage.getItem("writoken")) || ""
+    if(token===""){
+        window.location.href="../index.html"
+    }
+};
+
+
+  function addRow() {
+    const newRow = `
+    <tr>
+      <td><input type="text" name="name"></td>
+      <td><input type="text" name="email"></td>
+      <td><input type="text" name="phone"></td>
+      <td><button class="btn" onclick="deleteRow(this)">Delete</button></td>
+    </tr>`;
+    document.getElementById("dataRows").insertAdjacentHTML('beforeend', newRow);
+  }
+
+  function deleteRow(button) {
+    const row = button.closest("tr");
+    row.parentNode.removeChild(row);
+  }
+
+  function addRowSection2() {
+    const newRow = `
+    <tr>
+      <td><input type="url" name="fieldSection2[]"></td>
+      <td><button class="btn" onclick="deleteRowSection2(this)">Delete</button></td>
+    </tr>`;
+    document.getElementById("dataRowsSection2").insertAdjacentHTML('beforeend', newRow);
+  }
+
+  function addRowSection3() {
+    const newRow = `
+    <tr>
+      <td><input type="url" name="fieldSection2[]"></td>
+      <td><button class="btn" onclick="deleteRowSection2(this)">Delete</button></td>
+    </tr>`;
+    document.getElementById("dataRowsSection3").insertAdjacentHTML('beforeend', newRow);
+  }
+  function deleteRowSection2(button) {
+    const row = button.closest("tr");
+    row.parentNode.removeChild(row);
+  }
+  function deleteRowSection3(button) {
+    const row = button.closest("tr");
+    row.parentNode.removeChild(row);
+  }
+
+
+
+  function getSection1Data() {
+    const dataRows = document.querySelectorAll("#dataRows tr");
+    const dataArray = [];
+
+    dataRows.forEach(row => {
+      const inputs = row.querySelectorAll("input");
+      const obj = {
+        name: inputs[0].value,
+        email: inputs[1].value,
+        phone: inputs[2].value
+      };
+      dataArray.push(obj);
+    });
+
+    return dataArray;
+  }
+
+
+
+  function getSection2Data() {
+    const dataRows = document.querySelectorAll("#dataRowsSection2 tr");
+    const dataArray = [];
+
+    dataRows.forEach(row => {
+      const input = row.querySelector("input");
+      dataArray.push(input.value);
+    });
+
+    return dataArray;
+  }
+
+  function getSection3Data() {
+    const dataRows = document.querySelectorAll("#dataRowsSection3 tr");
+    const dataArray = [];
+
+    dataRows.forEach(row => {
+      const input = row.querySelector("input");
+      dataArray.push(input.value);
+    });
+    return dataArray;
+  }
+
+
+
+  // -------Discription function start---------
+
+
+  function pradeepAddInputField(button) {
+    var row = button.parentNode.parentNode;
+    var inputArea = row.querySelector('.pradeep-inputarea');
+    var newInputGroup = document.createElement('div');
+    newInputGroup.className = 'pradeep-input-group';
+    
+    var newInput1 = document.createElement('input');
+    newInput1.type = 'text';
+    newInput1.placeholder = 'Input ' + (inputArea.querySelectorAll('.pradeep-input-group').length + 1);
+
+    var newInput2 = document.createElement('input');
+    newInput2.type = 'text';
+    newInput2.placeholder = 'Input ' + (inputArea.querySelectorAll('.pradeep-input-group').length + 1);
+
+    var newCheckbox1 = document.createElement('input');
+    newCheckbox1.type = 'checkbox';
+
+    var newCheckbox2 = document.createElement('input');
+    newCheckbox2.type = 'checkbox';
+
+    var newLabel1= document.createElement('label').innerText="Word";
+    var newLabel2= document.createElement('label').innerText="URL";
+    var newLabel3= document.createElement('label').innerText="Yellow Highlight";
+    var newLabel4= document.createElement('label').innerText="Black Highlight";
+    
+    newInputGroup.append(newLabel1);
+    newInputGroup.appendChild(newInput1);
+    newInputGroup.append(newLabel2);
+    newInputGroup.appendChild(newInput2);
+    newInputGroup.append(newLabel3);
+    newInputGroup.appendChild(newCheckbox1);
+    newInputGroup.append(newLabel4);
+    newInputGroup.appendChild(newCheckbox2);
+
+    inputArea.appendChild(newInputGroup);
+  }
+
+  function pradeepDeleteInputField(button) {
+    var inputGroup = button.parentNode.querySelector('.pradeep-inputarea .pradeep-input-group:last-child');
+  
+    if (inputGroup.parentNode.querySelectorAll('.pradeep-input-group').length > 1) {
+      inputGroup.parentNode.removeChild(inputGroup);
+    }
+  }
+
+  function pradeepAddDeleteRow(button) {
+    var table = button.parentNode.parentNode.parentNode;
+    var row = table.insertRow(button.parentNode.parentNode.rowIndex + 1); 
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+
+    cell1.innerHTML = '<textarea placeholder="Text Area"></textarea>';
+    cell2.innerHTML = `
+    <div class="pradeep-inputarea">
+        <div class="pradeep-input-group">
+            <label>Word</label>
+          <input type="text" placeholder="Input 1">
+          <label>Url</label>
+          <input type="url" placeholder="Input 2">
+          <label>Yellow Highlight</label>
+          <input type="checkbox">
+          <label>Black Highlight</label>
+          <input type="checkbox">
+        </div>
+      </div>
+      <button onclick="pradeepAddInputField(this)">Add Input</button>
+      <button onclick="pradeepDeleteInputField(this)">Delete Input</button>`;
+    cell3.innerHTML = `
+      <button onclick="pradeepAddDeleteRow(this)">Add Row</button>
+      <button onclick="pradeepDeleteRow(this)">Delete Row</button>`;
+  }
+
+  function pradeepDeleteRow(button) {
+    var row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+  }
+
+
+
+
+
+
+  function pradeepSaveData() {
+    var table = document.querySelector('.pradeeptable');
+    var rows = table.rows;
+    var data = [];
+
+    for (var i = 1; i < rows.length; i++) {
+      var cells = rows[i].cells;
+
+      var inputGroups = cells[1].querySelectorAll('.pradeep-input-group');
+      var rowData = {
+        text: cells[0].querySelector('textarea').value,
+        inputsAndCheckboxes: []
+      };
+      
+      for (var j = 0; j < inputGroups.length; j++) {
+        var inputs = inputGroups[j].querySelectorAll('input[type="text"], input[type="url"]');
+        var checkboxes = inputGroups[j].querySelectorAll('input[type="checkbox"]');
+        
+        var inputAndCheckboxData = {
+          word: inputs[0].value,
+          url: inputs[1].value,
+          yellow: checkboxes[0].checked,
+          black: checkboxes[1].checked
+        };
+        
+        rowData.inputsAndCheckboxes.push(inputAndCheckboxData);
+      }
+
+      data.push(rowData);
+    }
+
+    return data
+  }
+
+
+
+
+  // -------Discription function ends---------
+
+
+
+
+
+
+
+
+  function collectFormData() {
+
+    const heading = document.getElementsByClassName("heading")[0].value
+    const date = document.getElementsByClassName("date")[0].value
+    const starttime = document.getElementsByClassName("starttime")[0].value
+    const endtime = document.getElementsByClassName("endtime")[0].value
+    const agendaurl = document.getElementById("agenda-url").value
+    const place = document.getElementsByClassName("place")[0].value
+    const eventmanagers = getSection1Data()
+    const discription = pradeepSaveData()
+    const eventvides = getSection3Data()
+    const eventrepoerts = getSection2Data();
+    const stateselect = document.getElementById("state_select").value
+    const eventfilter = document.getElementById("event_filter").value
+
+    let finalObj = {
+      "heading": heading,
+      "date": date,
+      "start_time": starttime,
+      "end_time": endtime,
+      "agenda_url": agendaurl,
+      "event_manager": eventmanagers,
+      "discription": discription,
+      "video_url": eventvides,
+      "report_url": eventrepoerts,
+      "place": place,
+      "state": stateselect,
+      "event_type": eventfilter
+    }
+    
+
+    eventpostRequest(finalObj)
+    // console.log(finalObj)
+
+  }
+
+  async function eventpostRequest(finalObj){
+        try {
+            let res = await fetch("http://localhost:8000/event/add", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(finalObj)
+            })
+            let data = await res.json()
+            if(data.message==='Event save successfully'){
+                 alert("Event save successfully")
+                 window.location.href="./event_dashboard.html"
+            }
+            else{
+              alert("Something went wrong please try again")
+            }
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+
+</script>

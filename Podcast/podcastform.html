@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>podcast From Addition</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 10px;
+        padding: 40px;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        text-align: center;
+        color: #000000;
+        background-color: #d6ab36;
+        border: 2px solid #000000;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+
+      button {
+        margin-top: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #000000;
+      }
+
+      .form-title {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .form-group {
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .button-group {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .button-group button {
+        margin-left: 10px;
+        padding: 8px 15px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .button-group button:last-child {
+        background-color: #dc3545;
+      }
+
+      /* Styling for each form option */
+      .addevent,
+      .managers,
+      .speakers,
+      .description,
+      .video,
+      .reports,
+      .state,
+      .image,
+      .eventclass,
+      .agenda {
+        border: 2px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      .addevent .form-label {
+        color: #000000;
+      }
+
+      .form-title {
+        margin-bottom: 0px;
+      }
+
+      .form-input-icon {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background-color: #007bff;
+        border-radius: 50%;
+        margin-left: 5px;
+      }
+
+      /* Custom styling for buttons */
+      .add-btn,
+      .remove-btn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+
+      .remove-btn {
+        background-color: #dc3545;
+        margin-left: 5px;
+      }
+
+      button.form-button {
+        background-color: #4CAF50;
+        color: #fff;
+        width: 150px;
+        height: 40px;
+        font-size: 16px;
+        font-weight: bold;
+        border: 2px solid #4CAF50;
+        border-radius: 10px;
+      }
+
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+
+      .btn {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      .center-align {
+        text-align: center;
+      }
+
+      td>input {
+        width: 70%;
+      }
+
+      td>textarea {
+        width: 80%;
+        height: 5rem;
+      }
+
+      td.para {
+        width: 50%;
+      }
+
+      input.text {
+        width: 95%;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <!-- Initial form option -->
+
+
+    <!-- <form> -->
+      
+    <h1 class="title">Add podcast Details</h1>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="state">
+      <h2 class="form-title">podcast State</h2>
+      <div class="form-group">
+        <label for="state_select">Select State:</label>
+        <select id="state_select" name="event_state" class="form-input">
+          <option value="">All State</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Rajasthan">Rajasthan</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="state">
+      <h2 class="form-title">podcast Filter By type</h2>
+      <div class="form-group">
+        <label for="state_select">Select Type:</label>
+        <select name="event" id="podcast_filter">
+          <option value="">Select Type</option>
+          <option value="Agricultural Transitions">Agricultural Transitions</option>
+          <option value="Industrial and Commercial Transitions">Industrial and Commercial Transitions</option>
+          <option value="Residential Transition">Residential Transition</option>
+        </select>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="addevent form-group">
+      <h1>Episod Detail</h1>
+      <label for="event_name" class="form-label">Episod No.</label>
+      <input type="number" class="form-input number">
+      <label for="event_name" class="form-label">Episod Name</label>
+      <input type="text" class="form-input name">
+    </div>
+
+
+
+    
+
+
+
+    <div class="button">
+        <button type="submit" onclick="collectFormData()" class="form-button">Submit</button>
+      </div>
+
+
+
+  </body>
+
+</html>
+
+
+
+
+<script>
+
+
+  function collectFormData() {
+
+    const episod = document.getElementsByClassName("number")[0].value
+    const name = document.getElementsByClassName("name")[0].value
+    const stateselect = document.getElementById("state_select").value
+    const podcastfilter = document.getElementById("podcast_filter").value
+
+    let finalObj = {
+      "episod_number":episod,
+      "episod_name": name,
+      "state": stateselect,
+      "podcast_filter": podcastfilter
+    }
+console.log(finalObj)
+    // eventpostRequest(finalObj)
+
+  }
+
+
+  async function eventpostRequest(finalObj){
+        try {
+            let res = await fetch("http://localhost:8000/podcast/add", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(finalObj)
+            })
+            let data = await res.json()
+            if(data.message==='podcast save successfully'){
+                 alert("podcast save successfully")
+                 window.location.href="./podcast_dashboard.html"
+            }
+            else{
+              alert("Something went wrong please try again")
+            }
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+
+</script>

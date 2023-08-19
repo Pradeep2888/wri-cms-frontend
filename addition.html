@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Addition Options</h2>
+        <a href="./Events/event_dashboard.html">Event</a>
+        <a href="./Article/article_dashboard.html">Article</a>
+        <a href="./Podcast/podcast_dashbord.html">Podcast</a>
+        <a href="./Publication/publication_dashboard.html">Publication</a>
+        <a href="#">Add Other</a>
+    </div>
+</body>
+</html>
+
+
+<script>
+
+window.onload = function() {
+    let token=JSON.parse(localStorage.getItem("writoken")) || ""
+    if(token===""){
+        window.location.href="../index.html"
+    }
+};
+
+</script>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Admin Login</h2>
+        <form id="loginForm">
+            <input type="text" placeholder="Admin Id" required class="id">
+            <input type="password" placeholder="Password" required class="password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+
+<script>
+
+    document.getElementById('loginForm').addEventListener('submit', handleFormSubmit);
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+
+        let id = document.getElementsByClassName("id")[0].value;
+        let password = document.getElementsByClassName("password")[0].value;
+
+        let formData = {
+            email: id,
+            password: password
+        };
+
+        // console.log(formData);
+
+        // let id:admin@wri.com
+        // let passwoerd:"Wriadmin123@"
+
+        loginRequest(formData)
+    }
+
+    async function loginRequest(formData){
+        let token=JSON.parse(localStorage.getItem("writoken")) || ""
+        console.log(token)
+        try {
+            let res = await fetch("http://localhost:8000/login/user/admin", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            let data = await res.json()
+            if(data.mesg==="Login sucessfull"){
+                token=data.token
+                localStorage.setItem("writoken",JSON.stringify(token))
+                alert("Login sucessfull")
+                window.location.href ="./admin_dashboard.html";
+            }
+            else{
+                alert("Something went wrong please try again")
+            }
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+
+
+</script>
+
+</html>

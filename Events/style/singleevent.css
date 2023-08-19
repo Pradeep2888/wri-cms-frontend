@@ -1,0 +1,369 @@
+section{
+    padding: 0 !important;
+}
+
+
+.container_singel_event_nav{
+    background-color: #DDE3DD;
+}
+.area_single_event_nav>a{
+    height: 100%;
+    display: flex;
+    gap: 1%;
+    width: 100%;
+    margin-left: 6%;
+    box-sizing: border-box;
+}
+.nav_single_event_row1{  
+    height: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.nav_single_event_row1_icon{
+    height: 2rem;
+    opacity: 1;
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.nav_single_event_row2{
+    position: relative;
+    top: 4px;
+    height: 100%;
+    background: transparent;
+     padding:  -1rem 0rem -1rem 0px;
+    overflow: hidden;
+}
+.nav_single_event_row2>p{
+    font-family: "Acumin Pro Condensed";
+    font-weight: bold;
+    font-size: 2.08vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #306C63;
+}
+
+
+
+
+
+/* <!-- **** Single Events  body start **** --> */
+
+.body_container .body_area{
+    margin: 3rem 5.8% 1rem 6% ;
+    display: flex;
+    gap: 10%;
+
+}
+.body_row1{
+    width: 60%;
+}
+
+.body_headingbox{
+    text-align: left;
+    opacity: 1;
+}
+.body_heading{
+    color: #306C63;
+    font-family: "Acumin Pro Condensed";
+    opacity: 1;
+    font-size: 2.86vw;
+    line-height: 3.38vw;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.single_event_body_para>p{
+    color: #2C2C2C;
+    font-family: "Acumin Pro";
+    text-align: left;
+    font-size: 1.25vw;
+    line-height: 1.875vw;
+    margin-bottom: 1rem;
+}
+
+.single_event_unorder_list>li{
+    color: #2C2C2C;
+    font-family: "Acumin Pro";
+    text-align: left;
+    font-size: 16px;
+}
+
+
+
+
+
+.single_event_body_vedio_heading_top{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+.single_event_body_vedio_heading{
+    display: block;
+    gap: 1.5%;
+    margin-bottom: 2rem;
+}
+.single_event_body_vedio_heading>div{
+    display: block;
+    gap: 1.5%; 
+}
+.single_event_body_vedio_heading>div>p{
+    font-family: "Acumin Pro Condensed";
+    font-size: 1.45vw !important;
+    line-height: 1.56vw !important;
+    font-weight: 900;
+    color: #2C2C2C;
+}
+.report_url>a{
+    font-family: "Acumin Pro Condensed";
+    font-size:16px !important;
+    line-height: 1.56vw !important;
+    color: #2A79BC !important;
+    font-weight: 600; 
+    margin-bottom: 1rem;
+    display: block;
+}
+.video_url>a{
+    font-family: "Acumin Pro Condensed";
+    font-size:16px !important;
+    line-height: 1.56vw !important;
+    color: #2A79BC !important;
+    font-weight: 600; 
+    margin-bottom: 1rem;
+    display: block;
+}
+
+
+.single_event_body_vedio_heading_link{
+    display: block;
+    gap: 1.5%;
+    margin-top: -10px;
+}
+.single_event_body_vedio_heading_link>div{
+    display: block;
+    gap: 1.5%;
+    
+}
+.single_event_body_vedio_heading_link>div>p{
+    font-family: "Acumin Pro Condensed";
+    font-size: 1.4vw !important;
+    font-weight: 900;
+    color: #2C2C2C;
+    line-height: 1.56vw;
+}
+/* shiv code start*/
+.single_event_body_related_link{
+    font-family: "Acumin Pro Condensed";
+    font-size: 14px !important;
+    font-weight: 900;
+    color: #2C2C2C;
+    text-decoration: none !important;
+}
+/* shiv code end */
+
+
+.single_event_body_vedio_heading_link>div>p>a{
+    font-family: "Acumin Pro Condensed";
+    font-size: 1.4vw !important;
+    color: #2A79BC !important;
+
+}
+
+.single_event_body_vedio>div{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+/* ****** single_event_body_row2 ****** */
+
+
+
+.single_event_body_row2{
+width: 30%;
+}
+
+.single_event_body_row2>div{
+    display: flex;
+    gap: 6%;
+    margin-top: 10px;
+}
+.single_event_body_row2_icon{
+    width: 4%;
+}
+.single_event_body_row2_icon>img{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.single_event_body_row2_detail{
+color: #2C2C2C;
+font-family: "Acumin Pro";
+font-weight: bold;
+font-size: 1.25vw;
+line-height: 1.875vw;
+}
+.single_event_body_row2_detail>p{
+    margin-top: 0;
+    font-weight: 600;
+}
+.time{
+color: #2C2C2C;
+font-family: "Acumin Pro";
+font-weight: bold;
+font-size: 1.25vw;
+line-height: 1.875vw;
+}
+.time>p{
+    margin-top: 0;
+    font-weight: 600;
+}
+.location{
+color: #2C2C2C;
+font-family: "Acumin Pro";
+font-weight: bold;
+font-size: 1.25vw;
+line-height: 1.875vw;
+}
+.location>p{
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.single_event_download_agenda{
+    display: flex;
+    color:#FFFFFF;
+    width: 100%;
+    font-family: "Acumin Pro";
+    background-color: #122034;
+    border: 1px solid #707070;
+    justify-content: space-between;
+    font-size: 1.25vw;
+    padding: 0px 12%;
+    line-height: 36px;
+}
+.single_event_download_agenda>div{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.download_agenda{
+    display: flex;
+    width: 100%;
+    text-decoration: none !important;
+    font-family: "Acumin Pro";
+}
+.single_event_download_agenda>div>p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.single_event_download_agenda>div>img{
+height: 1.4vw;
+width: 1.4vw;
+}
+
+
+.horizontal_line{
+    margin-top: 1rem;
+    border: 1px solid #9F9F9F;
+}
+
+.single_event_body_row2_inquery>p{
+    color: #306C63;
+    font-family: "Acumin Pro";
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.25vw;
+    line-height: 1.875vw;
+}
+
+.single_event_body_row2_mail_box{
+    display: block !important;
+    font-size: 0.9375vw;
+    line-height: 1.25vw;
+}
+
+.single_event_body_row2_mail_heading1{
+color: #2C2C2C;
+margin-top: 0px;
+margin-bottom: 0;
+font-weight: 600;
+font-family: "Acumin Pro";
+}
+.single_event_body_row2_mail{
+color: #2C2C2C;
+margin-top: 0px;
+margin-bottom: 0;
+font-family: "Acumin Pro";
+}
+
+@media screen and (min-width:1100px) {
+    .area_single_event_nav>a{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .body_container .body_area{
+        margin: 3rem 10% 1rem 10%;
+    }
+}
+@media screen and (min-width:1100px) {
+    .area_single_event_nav>a{
+        margin-left: 7.4%;
+        margin-right: 7.4%;
+    }
+    .body_container .body_area{
+        margin: 3rem 7% 1rem 8%;
+    }
+}
+@media screen and (min-width:1100px) {
+    .area_single_event_nav>a{
+        margin-left: 6.7%;
+        margin-right: 6.7%;
+    }
+    .body_container .body_area{
+        margin: 3rem 7% 1rem 6.7%;
+    }
+}
+
+
+@media screen and (min-width:1400px) {
+    .area_single_event_nav>a{
+        margin-left: 12.8%;
+        margin-right: 12.8%;
+    }
+    .body_container .body_area{
+        margin: 3rem 12.8% 1rem 12.8%;
+    }
+}
+@media screen and (min-width:1600px) {
+    .area_single_event_nav>a{
+        margin-left: 13%;
+        margin-right: 12%;
+    }
+    .body_container .body_area{
+        margin: 3rem 13% 1rem 13%;
+    }
+}
+@media screen and (min-width:1920px) {
+    .area_single_event_nav>a{
+        margin-left: 12.6%;
+        margin-right: 12.6%;
+    }
+    .body_container .body_area{
+        margin: 3rem 12.6% 1rem 12.6%;
+    }
+}
+@media screen and (min-width:2100px) {
+    .area_single_event_nav>a{
+        margin-left: 13.5%;
+        margin-right: 13.5%;
+    }
+    .body_container .body_area{
+        margin: 3rem 13.2% 1rem 13.5%;
+    }
+}
