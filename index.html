@@ -78,7 +78,7 @@
         let token=JSON.parse(localStorage.getItem("writoken")) || ""
         console.log(token)
         try {
-            let res = await fetch("https://server.protechplanner.info//login/user/admin", {
+            let res = await fetch("https://server.protechplanner.info/login/user/admin", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
