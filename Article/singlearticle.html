@@ -223,7 +223,20 @@
                     <p>Article</p>
                 </div>
             </a>
-        </div>
+            <div><button onclick="openModal('edit')">Upload Image</button></div>
+            <div><button onclick="publishEvent()">Publish Article</button></div>
+          </div>
+    
+          <div class="modal" id="modal">
+            <div class="modal-content">
+              <h3>Upload Image</h3>
+              <input type="file" id="imageUpload" accept=".png" />
+              <div style="display: flex">
+                <button class="action-button" onclick="updateImage()">Save</button>
+                <button class="action-button" onclick="closeModal()">Cancel</button>
+              </div>
+            </div>
+          </div>
     </section>
 
 
@@ -233,6 +246,10 @@
 
 
     <!-- **** Single Publication  body start **** -->
+
+    <section class="image_container">
+        <!-- <p>Pradeep</p> -->
+    </section>
 
     <section class="body_container">
         <div class="body_area">
@@ -421,17 +438,15 @@
 
 
         let token = JSON.parse(localStorage.getItem("singlearticle")) || ""
-        console.log(token)
         if (token === undefined) {
             window.location.href = "./article_dashboard.html"
         }
         else {
 
             try {
-                let res = await fetch(`https://server.protechplanner.info/article/singlearticle/${token}`)
+                let res = await fetch(`http://localhost:8000/article/singlearticle/${token}`)
                 let data = await res.json()
                 if (data.message = "welcome to event route") {
-                    console.log(data.data)
                     mapData(data.data)
                 }
                 else {
@@ -451,6 +466,7 @@
 
 
     function mapData(data) {
+      
         let hadding = document.getElementsByClassName("body_heading")[0].innerHTML = data.heading
         let discription = data.discription
 
@@ -736,8 +752,25 @@
         }
 
 
+
+
+       let image = document.getElementsByClassName("image_container")[0];
+    if(data.image_url){
+     let newImage = `<p ></p>`;
+     image.innerHTML = newImage;
+    }
+    else{
+      let newImage = `<p style="font-size:30px;color:red" >Upload Image</p>`;
+     image.innerHTML = newImage;
+    }
+
+
+
+
+
+
+
         let a = getFormateDate(data.article_publish_detail[0].date)
-        console.log(a)
 
 
         data.article_publish_detail.forEach((value, index) => {
@@ -757,6 +790,8 @@
         })
 
 
+
+
         let resercher = document.getElementsByClassName("resercherheading")[0].innerHTML = data.resercher
 
         let management = document.getElementsByClassName("address")[0]
@@ -773,11 +808,108 @@
         })
 
 
+ 
+ 
+     
+
+
     }
 
 
+   
 
 
+
+     // ______________Modal_______________________
+
+  function closeModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+  }
+
+  function openModal(action) {
+    var modal = document.getElementById("modal");
+    var modalMessage = document.getElementById("modal-message");
+
+    switch (action) {
+      case "edit":
+        break;
+    }
+
+    modal.style.display = "flex";
+  }
+
+  document
+    .getElementById("imageUpload")
+    .addEventListener("change", function (e) {
+      var file = e.target.files[0];
+
+      if (file.type !== "image/png") {
+        alert("Only PNG images are allowed!");
+        e.target.value = "";
+      } else {
+        var img = new Image();
+
+        img.onload = function () {
+          var width = this.width;
+          var height = this.height;
+
+          if (width !== 273 && height !== 485) {
+            // replace 500 with your desired width and height
+            alert(
+              `The image size must be 485x273! and this image height is ${height} and width is ${width} `
+            );
+            e.target.value = "";
+          }
+        };
+
+        img.src = URL.createObjectURL(file);
+      }
+    });
+
+  function updateImage() {
+    let token = JSON.parse(localStorage.getItem("singlearticle")) || "";
+    var input = document.querySelector('input[type="file"]');
+    var data = new FormData();
+    data.append("image", input.files[0]);
+
+    fetch(`http://localhost:8000/article/upload/${token}`, {
+      method: "POST",
+      body: data,
+    })
+      .then((response) => response.json())
+      .then((result) => {
+
+        if (result.message === "File uploaded successfully.") {
+          alert("File uploaded successfully.");
+          location.reload();
+        } else {
+          alert("Some thing went Wrong Please Try Again");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+
+  function publishEvent() {
+    let token = JSON.parse(localStorage.getItem("singleevent")) || "";
+
+    fetch(`http://localhost:8000/article/publish/${token}`, {
+      method: "PATCH",
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.message === "Data publish Successfully") {
+          alert("Data publish Successfully");
+        } else {
+          alert("Some thing went Wrong Please Try Again");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
 
 
 

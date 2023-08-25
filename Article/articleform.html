@@ -590,7 +590,7 @@ window.onload = function() {
 
   async function eventpostRequest(finalObj){
         try {
-            let res = await fetch("https://server.protechplanner.info/article/add", {
+            let res = await fetch("http://localhost:8000/article/add", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

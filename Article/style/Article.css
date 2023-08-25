@@ -12,6 +12,11 @@ section{
 .container_article_nav{
     background-color: #DDE3DD;
 }
+
+area_article_nav{
+    display: flex;
+}
+
 .area_article_nav>a{
     height: 100%;
     display: flex;

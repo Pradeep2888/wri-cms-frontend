@@ -1,760 +1,903 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="shortcut icon" href="../images/favicon.ico" />
     <!-- CSS Files    -->
-    <link rel="stylesheet" href="./style/single_publication.css">
-
+    <link rel="stylesheet" href="./style/single_publication.css" />
 
     <!-- CSS Files    -->
-    <link href="../assets/css/animate.css" rel="stylesheet">
-    <link href="../assets/css/style.css" rel="stylesheet">
-    <link href="../assets/fonts/fonts.css" rel="stylesheet">
-    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/animate.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/fonts/fonts.css" rel="stylesheet" />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
     <!-- Vendor CSS Files -->
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <!-- Google font Lato -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/boxicons/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link
+      href="../assets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google font Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 
+    <style>
+        .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+      }
+    </style>
 
 
+  </head>
 
-</head>
-
-<body>
-
-
-
-
-
+  <body>
     <!-- ======= Header ======= -->
     <header class="header">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <!--top-bar-->
-            <div class="container-fluid top-bar-sec">
-                <div class="container top-bar">
-                    <div class="row">
-                        <div class="col-lg-9 pl-0 textop pt-0">
-                            <a href="../index.html" style="text-decoration: none;">
-                                <h2 class="apcb">SUSTAINABLE ENERGY<br> TRANSFORMATION <span>A WRI India
-                                        Initiative</span>
-                                </h2>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="29.395" height="29.4"
-                                viewBox="0 0 29.395 29.4">
-                                <path id="Icon_awesome-search" data-name="Icon awesome-search"
-                                    d="M29,25.418l-5.724-5.724a1.377,1.377,0,0,0-.976-.4h-.936a11.937,11.937,0,1,0-2.067,2.067v.936a1.377,1.377,0,0,0,.4.976L25.418,29a1.372,1.372,0,0,0,1.946,0l1.625-1.625A1.384,1.384,0,0,0,29,25.418ZM11.943,19.292a7.349,7.349,0,1,1,7.349-7.349A7.345,7.345,0,0,1,11.943,19.292Z"
-                                    fill="#fff" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--top-bar-->
-
-            <!--top-middle-bar-->
-            <div class="container-fluid tg cotm">
-                <div class="container pt-0">
-                    <div class="row">
-                        <div class="dropdown">
-                            <button class="btn dropdown-toggle btn-dp" type="button" id="dropdownMenuButton"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Tamil Nadu<img class="arrowtop" src="../images/arrownew.png">
-                            </button>
-
-                            <div class="dropdown-menu full-w" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item dp-link" href="../index.html"><span class="all"> All
-                                        States</span></a>
-                                <a class="dropdown-item dp-link" href="../kerala.html"><span
-                                        class="kerala">Kerala</span></a>
-                                <a class="dropdown-item dp-link" href="../rajasthan.html"><span class="rajasthan">
-                                        Rajasthan</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navbar -->
-            <!-- Navbar -->
-            <div class="container pt-0">
-                <div class="row">
-                    <div class="navbar-header">
-                        <button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle">
-                            type="button">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div id="navbar-collapse-02" class="navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li style="padding-left:8px;"><a class="nav-link" href="../index.html"
-                                    style="padding-left:5px;">Home</a>
-                            </li>
-                            <li><a class="nav-link" href="../aboutus.html">About Us</a></li>
-                            <li><a class="dropbtn nav-link" href="#">Thematic Acess</a></li>
-                            <li class="dropdown">
-                                <a class="dropbtn nav-link nav-link-active" href="../resources.html">Resources
-                                    <svg fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1"
-                                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        viewBox="0 0 330 330" xml:space="preserve" class="dropdow-icon">
-                                        <path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
-	c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
-	s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
-                                    </svg>
-                                </a>
-
-                                <div class="dropdown-content">
-                                    <a onclick="openContent(event, 'publication')">Publications</a>
-                                    <a onclick="openContent(event, 'article')">Articles</a>
-                                    <a onclick="openContent(event, 'podcast')">Podcast</a>
-                                    <a onclick="openContent(event, 'blog')">Blog</a>
-                                </div>
-                            </li>
-                            <li><a class="nav-link " href="../events.html">Events</a></li>
-                            <li><a class="nav-link" href="#">Data</a></li>
-                            <li><a class="nav-link" href="../contact-us.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </nav>
-        <!--navbar -->
+      <nav class="navbar navbar-default navbar-fixed-top">
         <!--top-bar-->
-        <div class="mobile">
-            <div class="container-fluid top-bar-mob">
-                <div class="container top-bar-mob">
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <a href="../index.html" style="text-decoration: none;">
-                                <h2 class="apcb">SUSTAINABLE ENERGY<br> TRANSFORMATION
-                                </h2>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="29.395" height="29.4"
-                                viewBox="0 0 29.395 29.4">
-                                <path id="Icon_awesome-search" data-name="Icon awesome-search"
-                                    d="M29,25.418l-5.724-5.724a1.377,1.377,0,0,0-.976-.4h-.936a11.937,11.937,0,1,0-2.067,2.067v.936a1.377,1.377,0,0,0,.4.976L25.418,29a1.372,1.372,0,0,0,1.946,0l1.625-1.625A1.384,1.384,0,0,0,29,25.418ZM11.943,19.292a7.349,7.349,0,1,1,7.349-7.349A7.345,7.345,0,0,1,11.943,19.292Z"
-                                    fill="#fff" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+        <div class="container-fluid top-bar-sec">
+          <div class="container top-bar">
+            <div class="row">
+              <div class="col-lg-9 pl-0 textop pt-0">
+                <a href="../index.html" style="text-decoration: none">
+                  <h2 class="apcb">
+                    SUSTAINABLE ENERGY<br />
+                    TRANSFORMATION <span>A WRI India Initiative</span>
+                  </h2>
+                </a>
+              </div>
+              <div class="col-lg-3 icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="29.395"
+                  height="29.4"
+                  viewBox="0 0 29.395 29.4"
+                >
+                  <path
+                    id="Icon_awesome-search"
+                    data-name="Icon awesome-search"
+                    d="M29,25.418l-5.724-5.724a1.377,1.377,0,0,0-.976-.4h-.936a11.937,11.937,0,1,0-2.067,2.067v.936a1.377,1.377,0,0,0,.4.976L25.418,29a1.372,1.372,0,0,0,1.946,0l1.625-1.625A1.384,1.384,0,0,0,29,25.418ZM11.943,19.292a7.349,7.349,0,1,1,7.349-7.349A7.345,7.345,0,0,1,11.943,19.292Z"
+                    fill="#fff"
+                  />
+                </svg>
+              </div>
             </div>
-            <!--top-bar-->
-            <div class="container-fluid top-bar-mob-last-tamil">
-                <div class="row" style="margin-left: 14px !important;">
-                    <div class="col-sm-5 mbn">
-                        <button class="btn dropdown-toggle btn-dp" type="button" id="dropdownMenuButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            style="display:flex; padding-left:0px; flex-direction:row; align-items: center;">
-                            Tamil Nadu<svg xmlns="http://www.w3.org/2000/svg" width="23.616" height="13.503"
-                                viewBox="0 0 23.616 13.503" class="arrowtop">
-                                <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down"
-                                    d="M18,20.679l8.93-8.937a1.681,1.681,0,0,1,2.384,0,1.7,1.7,0,0,1,0,2.391L19.2,24.258a1.685,1.685,0,0,1-2.327.049L6.68,14.14a1.688,1.688,0,0,1,2.384-2.391Z"
-                                    transform="translate(-6.188 -11.246)" fill="#fff" />
-                            </svg>
-                        </button>
-
-                        <div class="dropdown-menu full-w" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item dp-link" href="../index.html"><span class="all"> All
-                                    States</span></a>
-                            <a class="dropdown-item dp-link" href="../kerala.html"><span
-                                    class="kerala">Kerala</span></a>
-                            <a class="dropdown-item dp-link" href="../rajasthan.html"><span class="rajasthan">
-                                    Rajasthan</span></a>
-                        </div>
-
-                    </div>
-                    <div class="col-sm-5 mbn">
-                        <!-- Trigger/Open The Modal -->
-                        <button id="myBtn"><i class="fa fa-bars"></i></button>
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-
-                                <ul class="nav navbar-nav">
-                                    <li style="padding-left:0;"><a class="nav-link1" href="../index.html">Home</a></li>
-                                    <li><a class="nav-link1" href="../aboutus.html">About Us</a></li>
-                                    <li><a class="nav-link1" href="#">Thematic Acess</a></li>
-                                    <li><a class="nav-link1" href="../resources.html">Resources</a></li>
-                                    <li><a class="nav-link1" href="../events.html">Events</a></li>
-                                    <li><a class="nav-link1" href="#">Data</a></li>
-                                    <li><a class="nav-link1" href="../contact-us.html">Contact Us</a></li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-        <!--navbar -->
+        <!--top-bar-->
+
+        <!--top-middle-bar-->
+        <div class="container-fluid tg cotm">
+          <div class="container pt-0">
+            <div class="row">
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle btn-dp"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Tamil Nadu<img
+                    class="arrowtop"
+                    src="../images/arrownew.png"
+                  />
+                </button>
+
+                <div
+                  class="dropdown-menu full-w"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <a class="dropdown-item dp-link" href="../index.html"
+                    ><span class="all"> All States</span></a
+                  >
+                  <a class="dropdown-item dp-link" href="../kerala.html"
+                    ><span class="kerala">Kerala</span></a
+                  >
+                  <a class="dropdown-item dp-link" href="../rajasthan.html"
+                    ><span class="rajasthan"> Rajasthan</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navbar -->
+        <!-- Navbar -->
+        <div class="container pt-0">
+          <div class="row">
+            <div class="navbar-header">
+              <button
+                data-target="#navbar-collapse-02"
+                data-toggle="collapse"
+                class="navbar-toggle"
+              >
+                type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div id="navbar-collapse-02" class="navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li style="padding-left: 8px">
+                  <a
+                    class="nav-link"
+                    href="../index.html"
+                    style="padding-left: 5px"
+                    >Home</a
+                  >
+                </li>
+                <li><a class="nav-link" href="../aboutus.html">About Us</a></li>
+                <li><a class="dropbtn nav-link" href="#">Thematic Acess</a></li>
+                <li class="dropdown">
+                  <a
+                    class="dropbtn nav-link nav-link-active"
+                    href="../resources.html"
+                    >Resources
+                    <svg
+                      fill="#000000"
+                      height="800px"
+                      width="800px"
+                      version="1.1"
+                      id="Layer_1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      viewBox="0 0 330 330"
+                      xml:space="preserve"
+                      class="dropdow-icon"
+                    >
+                      <path
+                        id="XMLID_225_"
+                        d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393
+	c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393
+	s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
+                      />
+                    </svg>
+                  </a>
+
+                  <div class="dropdown-content">
+                    <a onclick="openContent(event, 'publication')"
+                      >Publications</a
+                    >
+                    <a onclick="openContent(event, 'article')">Articles</a>
+                    <a onclick="openContent(event, 'podcast')">Podcast</a>
+                    <a onclick="openContent(event, 'blog')">Blog</a>
+                  </div>
+                </li>
+                <li><a class="nav-link" href="../events.html">Events</a></li>
+                <li><a class="nav-link" href="#">Data</a></li>
+                <li>
+                  <a class="nav-link" href="../contact-us.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--navbar -->
+      <!--top-bar-->
+      <div class="mobile">
+        <div class="container-fluid top-bar-mob">
+          <div class="container top-bar-mob">
+            <div class="row">
+              <div class="col-lg-9">
+                <a href="../index.html" style="text-decoration: none">
+                  <h2 class="apcb">
+                    SUSTAINABLE ENERGY<br />
+                    TRANSFORMATION
+                  </h2>
+                </a>
+              </div>
+              <div class="col-lg-3 icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="29.395"
+                  height="29.4"
+                  viewBox="0 0 29.395 29.4"
+                >
+                  <path
+                    id="Icon_awesome-search"
+                    data-name="Icon awesome-search"
+                    d="M29,25.418l-5.724-5.724a1.377,1.377,0,0,0-.976-.4h-.936a11.937,11.937,0,1,0-2.067,2.067v.936a1.377,1.377,0,0,0,.4.976L25.418,29a1.372,1.372,0,0,0,1.946,0l1.625-1.625A1.384,1.384,0,0,0,29,25.418ZM11.943,19.292a7.349,7.349,0,1,1,7.349-7.349A7.345,7.345,0,0,1,11.943,19.292Z"
+                    fill="#fff"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--top-bar-->
+        <div class="container-fluid top-bar-mob-last-tamil">
+          <div class="row" style="margin-left: 14px !important">
+            <div class="col-sm-5 mbn">
+              <button
+                class="btn dropdown-toggle btn-dp"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                style="
+                  display: flex;
+                  padding-left: 0px;
+                  flex-direction: row;
+                  align-items: center;
+                "
+              >
+                Tamil Nadu<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23.616"
+                  height="13.503"
+                  viewBox="0 0 23.616 13.503"
+                  class="arrowtop"
+                >
+                  <path
+                    id="Icon_ionic-ios-arrow-down"
+                    data-name="Icon ionic-ios-arrow-down"
+                    d="M18,20.679l8.93-8.937a1.681,1.681,0,0,1,2.384,0,1.7,1.7,0,0,1,0,2.391L19.2,24.258a1.685,1.685,0,0,1-2.327.049L6.68,14.14a1.688,1.688,0,0,1,2.384-2.391Z"
+                    transform="translate(-6.188 -11.246)"
+                    fill="#fff"
+                  />
+                </svg>
+              </button>
+
+              <div
+                class="dropdown-menu full-w"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a class="dropdown-item dp-link" href="../index.html"
+                  ><span class="all"> All States</span></a
+                >
+                <a class="dropdown-item dp-link" href="../kerala.html"
+                  ><span class="kerala">Kerala</span></a
+                >
+                <a class="dropdown-item dp-link" href="../rajasthan.html"
+                  ><span class="rajasthan"> Rajasthan</span></a
+                >
+              </div>
+            </div>
+            <div class="col-sm-5 mbn">
+              <!-- Trigger/Open The Modal -->
+              <button id="myBtn"><i class="fa fa-bars"></i></button>
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+
+                  <ul class="nav navbar-nav">
+                    <li style="padding-left: 0">
+                      <a class="nav-link1" href="../index.html">Home</a>
+                    </li>
+                    <li>
+                      <a class="nav-link1" href="../aboutus.html">About Us</a>
+                    </li>
+                    <li><a class="nav-link1" href="#">Thematic Acess</a></li>
+                    <li>
+                      <a class="nav-link1" href="../resources.html"
+                        >Resources</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav-link1" href="../events.html">Events</a>
+                    </li>
+                    <li><a class="nav-link1" href="#">Data</a></li>
+                    <li>
+                      <a class="nav-link1" href="../contact-us.html"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--navbar -->
     </header>
     <!--end header -->
-
-
-
-
-
-
-
 
     <!-- **** Single Publication Navbar Start  **** -->
 
     <section class="container_single_publication_nav">
-        <div class="area_single_publication_nav">
-            <a href="../resources.html">
-                <div class="nav_single_publication_row1">
-                    <img class="nav_single_publication_row1_icon" src="./assete/circle-arrow-left-solid.svg" />
-                </div>
-                <div class="nav_single_publication_row2">
-                    <p>Publication</p>
-                </div>
-            </a>
+      <div class="area_single_publication_nav">
+        <a href="../resources.html">
+          <div class="nav_single_publication_row1">
+            <img
+              class="nav_single_publication_row1_icon"
+              src="./assete/circle-arrow-left-solid.svg"
+            />
+          </div>
+          <div class="nav_single_publication_row2">
+            <p>Publication</p>
+          </div>
+        </a>
+        <div><button onclick="openModal('edit')">Upload Image</button></div>
+        <div><button onclick="publishEvent()">Publish Publication</button></div>
+      </div>
+
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <h3>Upload Image</h3>
+          <input type="file" id="imageUpload" accept=".png" />
+          <div style="display: flex">
+            <button class="action-button" onclick="updateImage()">Save</button>
+            <button class="action-button" onclick="closeModal()">Cancel</button>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- **** Single Publication Navbar Ends **** -->
 
-
-
     <!-- **** Single Publication  body start **** -->
 
     <section class="body_container">
-        <div class="body_area">
+      <div class="body_area">
+        <section class="body_row1">
+          <div class="body_headingbox">
+            <h1 class="body_heading"></h1>
+          </div>
 
-            <section class="body_row1">
-                <div class="body_headingbox">
-                    <h1 class="body_heading"></h1>
+          <div class="single_publication_body_img">
+                    <img class="publication_image" />
                 </div>
 
-                <!-- <div class="single_publication_body_img">
-                    <img src="./assete/Communication-Awareness-Building-Consumer-Category-Solar -Energy-TamilNadu.jpg"
-                        alt="
-                    Communication And Awareness Building For Consumer Category Solar Energy In Tamil Nadu" />
-                </div> -->
+          <div class="single_publication_body_para"></div>
+        </section>
 
-                <div class="single_publication_body_para">
+        <section class="single_publication_body_row2">
+          <div class="single_publication_body_row2_para">
+            <p class="publisher"></p>
+            <h3 class="date"></h3>
+          </div>
 
-                </div>
-
-
-            </section>
-
-
-
-
-
-            <section class="single_publication_body_row2">
-
-                <div class="single_publication_body_row2_para">
-                    <p class="publisher"></p>
-                    <h3 class="date"></h3>
-                </div>
-
-                <div class="download_report">
-
-                </div>
-
-            </section>
-
-        </div>
+          <div class="download_report"></div>
+        </section>
+      </div>
     </section>
 
     <!-- **** Single Publication body end **** -->
 
-
-
-
-
-
     <!-- footer -->
     <div class="footer">
-        <div class="container-fluid" style="background-color:#122034;padding:30px0px;">
-            <div class="container">
-                <div class="row footertop">
-
-                    <div class="col-lg-3">
-                        <h2>CONTACT INFO</h2>
-                        <p class="pt-4">For any inquiries, questions or<br> commendations, Please Contact</p>
-                        <p>Ahona Datta Gupta <br> Email: ahona.dattagupta@wri.org</p>
-                    </div>
-                    <hr id="mfoothor" class="laphide" style="color: white;
-              max-width: 91%;
-              margin: 35px 6px;">
-
-                    <div class="col-lg-5 mobhide" id="footpart2">
-                        <h2> IMPORTANT LINKS</h2>
-                        <ul class="list1">
-                            <li> <a href="../index.html">Home</a></li>
-                            <li> <a href="../resources.html">Resources</a></li>
-                            <li> <a href="../events.html">Events</a></li>
-                        </ul>
-                        <ul class="list2">
-                            <li> <a href="#">Data</a></li>
-                            <li> <a href="../aboutus.html">About Us</a></li>
-                            <li> <a href="../contact-us.html">Contact Us</a></li>
-                        </ul>
-                        <ul class="list3">
-                            <li> <a href="../tamilnadu.html">Tamil Nadu</a></li>
-                            <li> <a href="../rajasthan.html">Rajasthan</a></li>
-                            <li> <a href="../kerala.html">Kerala</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-5 laphide tabhide" id="footlinks">
-                        <h2> IMPORTANT LINKS</h2>
-                        <ul class="list1">
-                            <li> <a href="../index.html">Home</a></li>
-                            <li> <a href="../resources.html">Resources</a></li>
-                            <li> <a href="../events.html">Events</a></li>
-                            <li> <a href="#">Data</a></li>
-                            <li> <a href="../aboutus.html">About Us</a></li>
-                            <li> <a href="../contact-us.html">Contact Us</a></li>
-                            <li> <a href="../tamilnadu.html">Tamil Nadu</a></li>
-                            <li> <a href="../rajasthan.html">Rajasthan</a></li>
-                            <li> <a href="../kerala.html">Kerala</a></li>
-                        </ul>
-                    </div>
-
-                    <hr id="mfoothor" class="laphide" style="color: white;
-              max-width: 91%;
-              margin: 35px 6px;">
-
-                    <div class="col-lg-3" id="footform">
-                        <h2> WRITE TO US </h2>
-                        <div class="formfooter">
-                            <input class="form-control form-control-lg" type="text" max-length="5" placeholder="">
-                        </div>
-
-                        <ul class="footer_social" style="display: flex; justify-content: space-between;">
-                            <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
-                            <li><a href="#"><i class='bx bxl-instagram'></i></a></li>
-                            <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
-                            <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
-                        </ul>
-                    </div>
-
-                </div>
+      <div
+        class="container-fluid"
+        style="background-color: #122034; padding: 30px0px"
+      >
+        <div class="container">
+          <div class="row footertop">
+            <div class="col-lg-3">
+              <h2>CONTACT INFO</h2>
+              <p class="pt-4">
+                For any inquiries, questions or<br />
+                commendations, Please Contact
+              </p>
+              <p>
+                Ahona Datta Gupta <br />
+                Email: ahona.dattagupta@wri.org
+              </p>
             </div>
-        </div>
+            <hr
+              id="mfoothor"
+              class="laphide"
+              style="color: white; max-width: 91%; margin: 35px 6px"
+            />
 
-        <div class="container-fluid mobhide tabhide" style="background-color:#ffffff;padding:36px 0px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="copyright" style="display: flex; flex-direction:row;">
-                            <p><img src="../assets/img/logo.png" alt=""></p>
-                            <p><img src="../assets/img/logo2.png" alt=""></p>
-                            <p><img src="../assets/img/logo3.png" alt=""></p>
-                            <p><img src="../assets/img/logo4.png" alt=""></p>
-                            <p><img src="../assets/img/logo5.png" alt=""></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-5 mobhide" id="footpart2">
+              <h2>IMPORTANT LINKS</h2>
+              <ul class="list1">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../events.html">Events</a></li>
+              </ul>
+              <ul class="list2">
+                <li><a href="#">Data</a></li>
+                <li><a href="../aboutus.html">About Us</a></li>
+                <li><a href="../contact-us.html">Contact Us</a></li>
+              </ul>
+              <ul class="list3">
+                <li><a href="../tamilnadu.html">Tamil Nadu</a></li>
+                <li><a href="../rajasthan.html">Rajasthan</a></li>
+                <li><a href="../kerala.html">Kerala</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="container-fluid laphide" style="background-color:#ffffff;padding:36px 0px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="copyright footlogo">
-                            <p><img src="../assets/img/logo.png" alt=""></p>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="col-lg-5 laphide tabhide" id="footlinks">
+              <h2>IMPORTANT LINKS</h2>
+              <ul class="list1">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../resources.html">Resources</a></li>
+                <li><a href="../events.html">Events</a></li>
+                <li><a href="#">Data</a></li>
+                <li><a href="../aboutus.html">About Us</a></li>
+                <li><a href="../contact-us.html">Contact Us</a></li>
+                <li><a href="../tamilnadu.html">Tamil Nadu</a></li>
+                <li><a href="../rajasthan.html">Rajasthan</a></li>
+                <li><a href="../kerala.html">Kerala</a></li>
+              </ul>
             </div>
-        </div>
 
+            <hr
+              id="mfoothor"
+              class="laphide"
+              style="color: white; max-width: 91%; margin: 35px 6px"
+            />
 
-        <div class="container-fluid" style="background-color:#f0ab00;padding:6px 0px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="copyright">
-                            <p>© COPYRIGHT 2020.ALL RIGHT RESERVED. </p>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-3" id="footform">
+              <h2>WRITE TO US</h2>
+              <div class="formfooter">
+                <input
+                  class="form-control form-control-lg"
+                  type="text"
+                  max-length="5"
+                  placeholder=""
+                />
+              </div>
+
+              <ul
+                class="footer_social"
+                style="display: flex; justify-content: space-between"
+              >
+                <li>
+                  <a href="#"><i class="bx bxl-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="bx bxl-youtube"></i></a>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
 
+      <div
+        class="container-fluid mobhide tabhide"
+        style="background-color: #ffffff; padding: 36px 0px"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="copyright" style="display: flex; flex-direction: row">
+                <p><img src="../assets/img/logo.png" alt="" /></p>
+                <p><img src="../assets/img/logo2.png" alt="" /></p>
+                <p><img src="../assets/img/logo3.png" alt="" /></p>
+                <p><img src="../assets/img/logo4.png" alt="" /></p>
+                <p><img src="../assets/img/logo5.png" alt="" /></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container-fluid laphide"
+        style="background-color: #ffffff; padding: 36px 0px"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="copyright footlogo">
+                <p><img src="../assets/img/logo.png" alt="" /></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div
+        class="container-fluid"
+        style="background-color: #f0ab00; padding: 6px 0px"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="copyright">
+                <p>© COPYRIGHT 2020.ALL RIGHT RESERVED.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-
     <!-- ***** Footer Ends ***** -->
-
-</body>
-
+  </body>
 </html>
 
-
-
-
-
-
-
 <script>
-
-    async function getdata() {
-
-
-        let token = JSON.parse(localStorage.getItem("singlepublication")) || ""
-        console.log(token)
-        if (token === undefined) {
-            window.location.href = "./publication_dashboard.html"
+  async function getdata() {
+    let token = JSON.parse(localStorage.getItem("singlepublication")) || "";
+    console.log(token);
+    if (token === undefined) {
+      window.location.href = "./publication_dashboard.html";
+    } else {
+      try {
+        let res = await fetch(
+          `http://localhost:8000/publication/singlepublication/${token}`
+        );
+        let data = await res.json();
+        if ((data.message = "welcome to event route")) {
+          console.log(data.data);
+          mapData(data.data);
+        } else {
+          alert("Something wrong please try again");
         }
-        else {
-
-            try {
-                let res = await fetch(`https://server.protechplanner.info/publication/singlepublication/${token}`)
-                let data = await res.json()
-                if (data.message = "welcome to event route") {
-                    console.log(data.data)
-                    mapData(data.data)
-                }
-                else {
-                    alert("Something wrong please try again")
-                }
-            }
-            catch (err) {
-                console.log(err)
-            }
-
-        }
-
+      } catch (err) {
+        console.log(err);
+      }
     }
-    getdata()
+  }
+  getdata();
 
+  function mapData(data) {
+    let hadding = (document.getElementsByClassName(
+      "body_heading"
+    )[0].innerHTML = data.heading);
+    let discription = data.discription;
 
+    discription.forEach((value, pointer) => {
+      var para = value.text;
 
-
-    function mapData(data) {
-        let hadding = document.getElementsByClassName("body_heading")[0].innerHTML = data.heading
-        let discription = data.discription
-
-        discription.forEach((value, pointer) => {
-            var para = value.text
-
-            value.inputsAndCheckboxes.forEach((value, index) => {
-                if (value.word !== "" && value.url !== "" && value.yellow === true && value.black === false) {
-                    let a = yellowheighlightwithurl(discription[pointer].text, value.word, value.url)
-                    discription[pointer].text = a
-                }
-                else if (value.word !== "" && value.url !== "" && value.yellow === false && value.black === true) {
-                    let a = blackheighlightwithurl(discription[pointer].text, value.word, value.url)
-                    discription[pointer].text = a
-                }
-                else if (value.word !== "" && value.url === "" && value.yellow === true && value.black === false) {
-                    let a = yellowheighlight(discription[pointer].text, value.word, value.url)
-                    discription[pointer].text = a
-                }
-                else if (value.word !== "" && value.url === "" && value.yellow === false && value.black === true) {
-                    let a = blackheighlight(discription[pointer].text, value.word, value.url)
-                    discription[pointer].text = a
-                }
-                else if (value.word === "" && value.url === "" && value.yellow === true && value.black === false) {
-                    let a = yellowpara(discription[pointer].text)
-                    discription[pointer].text = a
-                }
-                else if (value.word === "" && value.url === "" && value.yellow === false && value.black === true) {
-                    let a = blackpara(discription[pointer].text)
-                    discription[pointer].text = a
-                }
-                else if (value.word === "" && value.url === "" && value.yellow === false && value.black === false) {
-                    let a = simplepara(discription[pointer].text)
-                    discription[pointer].text = a
-                }
-
-            })
-
-        })
-
-
-
-
-
-
-        function yellowheighlight(para, word, url) {
-
-
-            var totalindex = []
-            var para1 = para.trim().split(" ")
-            var word1 = word.trim().split(" ")
-            var index = []
-            function reduce() {
-
-
-                let i = 0
-                let j = 0
-                while (i < para1.length) {
-                    if (para1[i] === word1[j]) {
-                        index.push(i)
-                        i++
-                        j++
-                        if (word1.length === index.length) {
-                            totalindex.push(index)
-                            i++
-                            j = 0
-                            index = []
-                            break;
-                        }
-
-                    }
-                    else {
-                        i++
-                        j = 0
-                        index = []
-                    }
-                }
-            }
-            reduce()
-
-
-            for (let i = 0; i < totalindex.length; i++) {
-                para1.splice(totalindex[i][0], totalindex[i].length, `<strong style="color: #F0AB00;" >${word}</strong>`)
-                reduce()
-            }
-
-            return para1.join(" ")
-
+      value.inputsAndCheckboxes.forEach((value, index) => {
+        if (
+          value.word !== "" &&
+          value.url !== "" &&
+          value.yellow === true &&
+          value.black === false
+        ) {
+          let a = yellowheighlightwithurl(
+            discription[pointer].text,
+            value.word,
+            value.url
+          );
+          discription[pointer].text = a;
+        } else if (
+          value.word !== "" &&
+          value.url !== "" &&
+          value.yellow === false &&
+          value.black === true
+        ) {
+          let a = blackheighlightwithurl(
+            discription[pointer].text,
+            value.word,
+            value.url
+          );
+          discription[pointer].text = a;
+        } else if (
+          value.word !== "" &&
+          value.url === "" &&
+          value.yellow === true &&
+          value.black === false
+        ) {
+          let a = yellowheighlight(
+            discription[pointer].text,
+            value.word,
+            value.url
+          );
+          discription[pointer].text = a;
+        } else if (
+          value.word !== "" &&
+          value.url === "" &&
+          value.yellow === false &&
+          value.black === true
+        ) {
+          let a = blackheighlight(
+            discription[pointer].text,
+            value.word,
+            value.url
+          );
+          discription[pointer].text = a;
+        } else if (
+          value.word === "" &&
+          value.url === "" &&
+          value.yellow === true &&
+          value.black === false
+        ) {
+          let a = yellowpara(discription[pointer].text);
+          discription[pointer].text = a;
+        } else if (
+          value.word === "" &&
+          value.url === "" &&
+          value.yellow === false &&
+          value.black === true
+        ) {
+          let a = blackpara(discription[pointer].text);
+          discription[pointer].text = a;
+        } else if (
+          value.word === "" &&
+          value.url === "" &&
+          value.yellow === false &&
+          value.black === false
+        ) {
+          let a = simplepara(discription[pointer].text);
+          discription[pointer].text = a;
         }
+      });
+    });
 
-
-
-
-
-
-
-
-
-        function yellowheighlightwithurl(para, word, url) {
-            var totalindex = []
-            var para1 = para.trim().split(" ")
-            var word1 = word.trim().split(" ")
-            var index = []
-            function reduce() {
-
-
-                let i = 0
-                let j = 0
-                while (i < para1.length) {
-                    if (para1[i] === word1[j]) {
-                        index.push(i)
-                        i++
-                        j++
-                        if (word1.length === index.length) {
-                            totalindex.push(index)
-                            i++
-                            j = 0
-                            index = []
-                            break;
-                        }
-
-                    }
-                    else {
-                        i++
-                        j = 0
-                        index = []
-                    }
-                }
+    function yellowheighlight(para, word, url) {
+      var totalindex = [];
+      var para1 = para.trim().split(" ");
+      var word1 = word.trim().split(" ");
+      var index = [];
+      function reduce() {
+        let i = 0;
+        let j = 0;
+        while (i < para1.length) {
+          if (para1[i] === word1[j]) {
+            index.push(i);
+            i++;
+            j++;
+            if (word1.length === index.length) {
+              totalindex.push(index);
+              i++;
+              j = 0;
+              index = [];
+              break;
             }
-            reduce()
+          } else {
+            i++;
+            j = 0;
+            index = [];
+          }
+        }
+      }
+      reduce();
 
+      for (let i = 0; i < totalindex.length; i++) {
+        para1.splice(
+          totalindex[i][0],
+          totalindex[i].length,
+          `<strong style="color: #F0AB00;" >${word}</strong>`
+        );
+        reduce();
+      }
 
-            for (let i = 0; i < totalindex.length; i++) {
-                para1.splice(totalindex[i][0], totalindex[i].length, `<a href="${url}" style="color: #F0AB00;">${word}</a>`)
-                reduce()
+      return para1.join(" ");
+    }
+
+    function yellowheighlightwithurl(para, word, url) {
+      var totalindex = [];
+      var para1 = para.trim().split(" ");
+      var word1 = word.trim().split(" ");
+      var index = [];
+      function reduce() {
+        let i = 0;
+        let j = 0;
+        while (i < para1.length) {
+          if (para1[i] === word1[j]) {
+            index.push(i);
+            i++;
+            j++;
+            if (word1.length === index.length) {
+              totalindex.push(index);
+              i++;
+              j = 0;
+              index = [];
+              break;
             }
-
-            return para1.join(" ")
-
-
+          } else {
+            i++;
+            j = 0;
+            index = [];
+          }
         }
+      }
+      reduce();
 
+      for (let i = 0; i < totalindex.length; i++) {
+        para1.splice(
+          totalindex[i][0],
+          totalindex[i].length,
+          `<a href="${url}" style="color: #F0AB00;">${word}</a>`
+        );
+        reduce();
+      }
 
+      return para1.join(" ");
+    }
 
-
-
-
-
-
-
-        function blackheighlight(para, word, url) {
-            var totalindex = []
-            var para1 = para.trim().split(" ")
-            var word1 = word.trim().split(" ")
-            var index = []
-            function reduce() {
-
-
-                let i = 0
-                let j = 0
-                while (i < para1.length) {
-                    if (para1[i] === word1[j]) {
-                        index.push(i)
-                        i++
-                        j++
-                        if (word1.length === index.length) {
-                            totalindex.push(index)
-                            i++
-                            j = 0
-                            index = []
-                            break;
-                        }
-
-                    }
-                    else {
-                        i++
-                        j = 0
-                        index = []
-                    }
-                }
+    function blackheighlight(para, word, url) {
+      var totalindex = [];
+      var para1 = para.trim().split(" ");
+      var word1 = word.trim().split(" ");
+      var index = [];
+      function reduce() {
+        let i = 0;
+        let j = 0;
+        while (i < para1.length) {
+          if (para1[i] === word1[j]) {
+            index.push(i);
+            i++;
+            j++;
+            if (word1.length === index.length) {
+              totalindex.push(index);
+              i++;
+              j = 0;
+              index = [];
+              break;
             }
-            reduce()
+          } else {
+            i++;
+            j = 0;
+            index = [];
+          }
+        }
+      }
+      reduce();
 
+      for (let i = 0; i < totalindex.length; i++) {
+        para1.splice(
+          totalindex[i][0],
+          totalindex[i].length,
+          `<strong>${word}<strong>`
+        );
+        reduce();
+      }
 
-            for (let i = 0; i < totalindex.length; i++) {
-                para1.splice(totalindex[i][0], totalindex[i].length, `<strong>${word}<strong>`)
-                reduce()
+      return para1.join(" ");
+    }
+
+    function blackheighlightwithurl(para, word, url) {
+      var totalindex = [];
+      var para1 = para.trim().split(" ");
+      var word1 = word.trim().split(" ");
+      var index = [];
+      function reduce() {
+        let i = 0;
+        let j = 0;
+        while (i < para1.length) {
+          if (para1[i] === word1[j]) {
+            index.push(i);
+            i++;
+            j++;
+            if (word1.length === index.length) {
+              totalindex.push(index);
+              i++;
+              j = 0;
+              index = [];
+              break;
             }
-
-            return para1.join(" ")
-
+          } else {
+            i++;
+            j = 0;
+            index = [];
+          }
         }
+      }
+      reduce();
+
+      for (let i = 0; i < totalindex.length; i++) {
+        para1.splice(
+          totalindex[i][0],
+          totalindex[i].length,
+          `<a href="${url}" style="font-weight:bold;color: #000000;">${word}</a>`
+        );
+        reduce();
+      }
+
+      return para1.join(" ");
+    }
+
+    function yellowpara(para) {
+      let newPara = `<strong style="color: #F0AB00;"  >${para}</strong>`;
+      return newPara;
+    }
+    function blackpara(para) {
+      let newPara = `<strong>${para}</strong>`;
+      return newPara;
+    }
+
+    function simplepara(para) {
+      let newPara = `${para}`;
+      return newPara;
+    }
+
+    discription.forEach((value, index) => {
+      let newPara = `<p>${value.text}</p>`;
+      let paragraph = document.getElementsByClassName(
+        "single_publication_body_para"
+      )[0];
+      paragraph.insertAdjacentHTML("beforeend", newPara);
+    });
+
+    const getFormateDate = (inputDate) => {
+      const parsedDate = new Date(inputDate);
+      const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      const formattedDate = `${
+        months[parsedDate.getMonth()]
+      } ${parsedDate.getFullYear()}`;
+
+      return formattedDate;
+    };
+
+    let publisher = document.getElementsByClassName("publisher")[0];
+    data.publisher.map((value, index) => {
+      publisher.innerHTML = value + ", " + publisher.innerHTML;
+    });
+
+
+    let image = document.getElementsByClassName("publication_image")[0];
+    if(data.image_url){
+     image.src=data.image_url
+     image.alt=data.heading
+    }
 
 
 
+    let date = (document.getElementsByClassName("date")[0].innerHTML =
+      getFormateDate(data.date));
 
-
-
-
-
-
-        function blackheighlightwithurl(para, word, url) {
-            var totalindex = []
-            var para1 = para.trim().split(" ")
-            var word1 = word.trim().split(" ")
-            var index = []
-            function reduce() {
-
-
-                let i = 0
-                let j = 0
-                while (i < para1.length) {
-                    if (para1[i] === word1[j]) {
-                        index.push(i)
-                        i++
-                        j++
-                        if (word1.length === index.length) {
-                            totalindex.push(index)
-                            i++
-                            j = 0
-                            index = []
-                            break;
-                        }
-
-                    }
-                    else {
-                        i++
-                        j = 0
-                        index = []
-                    }
-                }
-            }
-            reduce()
-
-
-            for (let i = 0; i < totalindex.length; i++) {
-                para1.splice(totalindex[i][0], totalindex[i].length, `<a href="${url}" style="font-weight:bold;color: #000000;">${word}</a>`)
-                reduce()
-            }
-
-            return para1.join(" ")
-        }
-
-
-        function yellowpara(para) {
-            let newPara = `<strong style="color: #F0AB00;"  >${para}</strong>`
-            return newPara
-        }
-        function blackpara(para) {
-            let newPara = `<strong>${para}</strong>`
-            return newPara
-        }
-
-        function simplepara(para) {
-            let newPara = `${para}`
-            return newPara
-        }
-
-
-
-        discription.forEach((value, index) => {
-            let newPara = `<p>${value.text}</p>`
-            let paragraph = document.getElementsByClassName("single_publication_body_para")[0]
-            paragraph.insertAdjacentHTML('beforeend', newPara);
-        })
-
-
-
-
-
-
-        const getFormateDate = (inputDate) => {
-
-
-            const parsedDate = new Date(inputDate);
-            const months = [
-                "January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"
-            ];
-            const formattedDate = `${months[parsedDate.getMonth()]} ${parsedDate.getFullYear()}`;
-
-            return formattedDate
-        }
-
-
-
-
-
-        let publisher = document.getElementsByClassName("publisher")[0]
-        data.publisher.map((value, index) => {
-            publisher.innerHTML = value + ", " + publisher.innerHTML
-        })
-
-        let date = document.getElementsByClassName("date")[0].innerHTML = getFormateDate(data.date)
-
-
-
-        let download_report = document.getElementsByClassName("download_report")[0]
-        let button = `
+    let download_report = document.getElementsByClassName("download_report")[0];
+    let button = `
                   <button class="single_publication_download_agenda">
                         <a target="_blank" href="${data.report_url}">
                             <div>
@@ -763,21 +906,97 @@
                             <div><img src="./assete/Icon feather-download.png" alt="Download_icon" /></div>
                         </a>
                     </button>
-       `
-        download_report.innerHTML=button
+       `;
+    download_report.innerHTML = button;
+  }
 
+  // ______________Modal_______________________
 
+  function closeModal() {
+    var modal = document.getElementById("modal");
+    modal.style.display = "none";
+  }
 
+  function openModal(action) {
+    var modal = document.getElementById("modal");
+    var modalMessage = document.getElementById("modal-message");
+
+    switch (action) {
+      case "edit":
+        break;
     }
 
+    modal.style.display = "flex";
+  }
 
+  document
+    .getElementById("imageUpload")
+    .addEventListener("change", function (e) {
+      var file = e.target.files[0];
 
+      if (file.type !== "image/png") {
+        alert("Only PNG images are allowed!");
+        e.target.value = "";
+      } else {
+        var img = new Image();
 
+        img.onload = function () {
+          var width = this.width;
+          var height = this.height;
 
+          if (width !== 206 && height !== 372) {
+            // replace 500 with your desired width and height
+            alert(
+              `The image size must be 372x206! and this image height is ${height} and width is ${width} `
+            );
+            e.target.value = "";
+          }
+        };
 
+        img.src = URL.createObjectURL(file);
+      }
+    });
 
+  function updateImage() {
+    let token = JSON.parse(localStorage.getItem("singlepublication")) || "";
+    var input = document.querySelector('input[type="file"]');
+    var data = new FormData();
+    data.append("image", input.files[0]);
 
+    fetch(`http://localhost:8000/publication/upload/${token}`, {
+      method: "POST",
+      body: data,
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.message === "File uploaded successfully.") {
+          alert("File uploaded successfully.");
+          location.reload();
+        } else {
+          alert("Some thing went Wrong Please Try Again");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
 
+  function publishEvent() {
+    let token = JSON.parse(localStorage.getItem("singleevent")) || "";
 
-
+    fetch(`http://localhost:8000/publication/publish/${token}`, {
+      method: "PATCH",
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        if (result.message === "Data publish Successfully") {
+          alert("Data publish Successfully");
+        } else {
+          alert("Some thing went Wrong Please Try Again");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
 </script>
