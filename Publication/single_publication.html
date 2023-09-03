@@ -879,10 +879,17 @@
       return formattedDate;
     };
 
-    let publisher = document.getElementsByClassName("publisher")[0];
+    if(data.publisher[0]===""){
+      document.getElementsByClassName("publisher")[0].style.display="none"
+    }
+    else{
+      let publisher = document.getElementsByClassName("publisher")[0];
     data.publisher.map((value, index) => {
       publisher.innerHTML = value + ", " + publisher.innerHTML;
     });
+    }
+
+  
 
 
     let image = document.getElementsByClassName("publication_image")[0];
@@ -891,12 +898,19 @@
      image.alt=data.heading
     }
 
-
-
-    let date = (document.getElementsByClassName("date")[0].innerHTML =
+if(data.date===""){
+  document.getElementsByClassName("date")[0].style.display="none"
+}
+else{
+  let date = (document.getElementsByClassName("date")[0].innerHTML =
       getFormateDate(data.date));
+}
 
-    let download_report = document.getElementsByClassName("download_report")[0];
+if(data.report_url===""){
+  document.getElementsByClassName("download_report")[0].style.display="none"
+}
+else{
+  let download_report = document.getElementsByClassName("download_report")[0];
     let button = `
                   <button class="single_publication_download_agenda">
                         <a target="_blank" href="${data.report_url}">
@@ -908,6 +922,9 @@
                     </button>
        `;
     download_report.innerHTML = button;
+}
+
+   
   }
 
   // ______________Modal_______________________

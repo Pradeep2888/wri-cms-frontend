@@ -317,9 +317,7 @@
 
     <!-- **** Single Events  body start **** -->
 
-
-    <section class="image_container">
-    </section>
+    <section class="image_container"></section>
 
     <section class="body_container">
       <div class="body_area">
@@ -350,28 +348,28 @@
         </section>
 
         <section class="single_event_body_row2">
-          <div>
+          <div class="event_date">
             <div class="single_event_body_row2_icon">
               <img src="./assete/calendar-days-regular.svg" alt="location" />
             </div>
             <div class="single_event_body_row2_detail"></div>
           </div>
 
-          <div>
+          <div class="event_time">
             <div class="single_event_body_row2_icon">
               <img src="./assete/clock-regular.svg" alt="location" />
             </div>
             <div class="time"></div>
           </div>
 
-          <div>
+          <div class="event_location">
             <div class="single_event_body_row2_icon">
               <img src="./assete/location-dot-solid.svg" alt="location" />
             </div>
             <div class="location"></div>
           </div>
 
-          <div>
+          <div class="download_agenda">
             <a class="download_agenda" target="_blank">
               <button class="single_event_download_agenda">
                 <div>
@@ -562,6 +560,7 @@
         let data = await res.json();
         if ((data.message = "welcome to event route")) {
           mapData(data.data);
+          console.log(data.data);
         } else {
           alert("Something wrong please try again");
         }
@@ -845,16 +844,25 @@
     });
 
     let report_url = document.getElementsByClassName("report_url")[0];
-    data.report_url.forEach((value, index) => {
-      let tag = document.createElement("a");
-      tag.innerText = value;
-      tag.href = value;
-
-      report_url.appendChild(tag);
-    });
+    if (data.report_url.length === 0) {
+      let r = document.getElementsByClassName("single_event_body_vedio_heading");
+      r[0].style.display = "none";
+    } else {
+      data.report_url.forEach((value, index) => {
+        let tag = document.createElement("a");
+        tag.innerText = value;
+        tag.href = value;
+        report_url.appendChild(tag);
+      });
+    }
 
     let video_url = document.getElementsByClassName("video_url")[0];
-    data.video_url.forEach((value, index) => {
+    if(data.video_url.length===0){
+      let v = document.getElementsByClassName("single_event_body_vedio_heading_link");
+      v[0].style.display = "none";
+    }
+    else{
+      data.video_url.forEach((value, index) => {
       let tag = document.createElement("a");
       tag.innerText = value;
       tag.href = value;
@@ -862,7 +870,11 @@
       video_url.appendChild(tag);
     });
 
-    let video_box = document.getElementsByClassName(
+    }
+  
+
+    if(data.video_url.length!==0){
+      let video_box = document.getElementsByClassName(
       "single_event_body_vedio"
     )[0];
     data.video_url.forEach((value, index) => {
@@ -879,6 +891,16 @@
 
       video_box.insertAdjacentHTML("beforeend", newFrame);
     });
+    }
+
+
+    
+
+    if(data.date===undefined){
+  let d=document.getElementsByClassName("event_date")
+  d[0].style.display="none"
+    }
+    else{
 
     let date = document.getElementsByClassName(
       "single_event_body_row2_detail"
@@ -905,29 +927,60 @@
     let newDate = `<p>${formattedDate}</p>`;
     date.innerHTML = newDate;
 
+  }
+
+
+  if(data.end_time===undefined && data.start_time===undefined){
+    let time=document.getElementsByClassName("event_time")
+    time[0].style.display="none"
+  }
+  else{
+
     let time = document.getElementsByClassName("time")[0];
     let newTime = `<p>${data.start_time} am - ${data.end_time} pm</p>`;
     time.innerHTML = newTime;
 
+  }
+
+   
+  if(data.place===undefined){
+   let l=document.getElementsByClassName("event_location")[0].style.display="none"
+  }
+  else{
     let location = document.getElementsByClassName("location")[0];
     let newlocation = `<p>${data.place}</p>`;
     location.innerHTML = newlocation;
+  }
+
+
 
     let image = document.getElementsByClassName("image_container")[0];
-    if(data.image_url){
-     let newImage = `<p ></p>`;
-     image.innerHTML = newImage;
+    if (data.image_url) {
+      let newImage = `<p ></p>`;
+      image.innerHTML = newImage;
+    } else {
+      let newImage = `<p style="font-size:30px;color:red" >Upload Image</p>`;
+      image.innerHTML = newImage;
+    }
+
+    if(data.agenda_url===undefined){
+    document.getElementsByClassName("download_agenda")[0].style.display="none"
+    document.getElementsByClassName("horizontal_line")[0].style.display="none"
     }
     else{
-      let newImage = `<p style="font-size:30px;color:red" >Upload Image</p>`;
-     image.innerHTML = newImage;
-    }
-    
-
-    let agenda_url = document.getElementsByClassName("download_agenda")[0];
+      let agenda_url = document.getElementsByClassName("download_agenda")[0];
     agenda_url.href = data.agenda_url;
 
-    let management = document.getElementsByClassName(
+    }
+     
+
+    if(data.event_manager.length===0){
+      document.getElementsByClassName("single_event_body_row2_inquery")[0].style.display="none"
+    document.getElementsByClassName("single_event_body_row2_mail_box")[0].style.display="none"
+    }
+    else{
+
+      let management = document.getElementsByClassName(
       "single_event_body_row2_mail_box"
     )[0];
     data.event_manager.forEach((value, index) => {
@@ -942,6 +995,10 @@
             `;
       management.insertAdjacentHTML("beforeend", newInquirey);
     });
+
+    }
+ 
+  
   }
 
   // ______________Modal_______________________
@@ -1003,7 +1060,6 @@
     })
       .then((response) => response.json())
       .then((result) => {
-
         if (result.message === "File uploaded successfully.") {
           alert("File uploaded successfully.");
           location.reload();
