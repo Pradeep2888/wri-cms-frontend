@@ -542,6 +542,7 @@
         let data = await res.json();
         if ((data.message = "welcome to event route")) {
           mapData(data.data);
+          console.log(data.data);
         } else {
           alert("Something wrong please try again");
         }
@@ -864,7 +865,7 @@
 
       data.article_publish_detail.forEach((value, index) => {
         let newPara = `
-            <div>
+                        <div>
                             <p>This article was published in the ${
                               value.newspaper
                             } on<b> ${getFormateDate(value.date)}</b>

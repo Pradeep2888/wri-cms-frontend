@@ -843,8 +843,10 @@
       paragraph.insertAdjacentHTML("beforeend", newPara);
     });
 
+    console.log(data.report_url[0]==="")
+
     let report_url = document.getElementsByClassName("report_url")[0];
-    if (data.report_url.length === 0) {
+    if (data.report_url[0] === "") {
       let r = document.getElementsByClassName("single_event_body_vedio_heading");
       r[0].style.display = "none";
     } else {
@@ -930,6 +932,20 @@
   }
 
 
+
+
+  function convertToAMPM(time) {
+  const [hours, minutes] = time.split(':').map(Number);
+  const period = hours >= 12 ? 'pm' : 'am';
+  const hours12 = hours % 12 || 12;
+  const result = `${hours12}:${minutes.toString().padStart(2, '0')} ${period}`;
+  return result;
+}
+
+
+  
+
+
   if(data.end_time===undefined && data.start_time===undefined){
     let time=document.getElementsByClassName("event_time")
     time[0].style.display="none"
@@ -937,7 +953,7 @@
   else{
 
     let time = document.getElementsByClassName("time")[0];
-    let newTime = `<p>${data.start_time} am - ${data.end_time} pm</p>`;
+    let newTime = `<p>${convertToAMPM(data.start_time)} - ${convertToAMPM(data.end_time)}</p>`;
     time.innerHTML = newTime;
 
   }
@@ -963,7 +979,8 @@
       image.innerHTML = newImage;
     }
 
-    if(data.agenda_url===undefined){
+
+    if(data.agenda_url===""){
     document.getElementsByClassName("download_agenda")[0].style.display="none"
     document.getElementsByClassName("horizontal_line")[0].style.display="none"
     }

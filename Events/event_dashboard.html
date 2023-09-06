@@ -167,6 +167,7 @@
             if (data.message = "welcome to event route") {
                 mapData(data.data)
                 AllData=data.data
+                console.log(data.data)
             }
             else {
                 alert("Something wrong please try again")
@@ -208,28 +209,28 @@
             <td>${value.date}</td>
             <td>${value.start_time}</td>
             <td>${value.end_time}</td>
-            <td> <button class="action-button" onclick="openModal('edit')" onclick="editEvent(${index})">Edit Time</button></td>
+            <td> <button class="action-button" onclick="editEvent(${index})">Edit Time</button></td>
             <td> <button class="action-button delete-button" onclick="deleteEvent(${index})">Delete</button></td>
             <td><button class="action-button" onclick="previewEvent(${index})">Preview</button></td>
             </tr>
         </tbody>
        </table>
 
-            <div class="modal" id="modal">
+            <div class="modal" id="modal${index}">
                 <div class="modal-content">
                     <h3>Edit Date And Time</h3>
                      <p>${value._id}</p>
                     <p id="modal-message"></p>
                     <label for="event-date">Event Date:</label>
-                    <input type="date" id="event-date" class="input-field" value='${value.date}' >
+                    <input type="date" id="event-date${index}" class="input-field" value='${value.date}' >
 
                     <label for="start-time">Start Time:</label>
-                    <input type="time" id="start-time" class="input-field" value='${value.start_time}' >
+                    <input type="time" id="start-time${index}" class="input-field" value='${value.start_time}' >
 
                     <label for="end-time">End Time:</label>
-                    <input type="time" id="end-time" class="input-field" value='${value.end_time}'  >
+                    <input type="time" id="end-time${index}" class="input-field" value='${value.end_time}'  >
 
-                    <button class="action-button" onclick="updateModal(${index})" >Update</button>
+                    <button class="action-button" onclick="updateModal()" >Update</button>
                     <button class="action-button" onclick="closeModal()">Close</button>
                 </div>
             </div>
@@ -240,9 +241,9 @@
         })
     }
 
-
+    var indexvalue
     function openModal(action) {
-        var modal = document.getElementById("modal");
+        var modal = document.getElementById(`modal${indexvalue}`);
         var modalMessage = document.getElementById("modal-message");
 
         switch (action) {
@@ -255,11 +256,12 @@
     }
 
 
-    async function updateModal(index){
-        const id=AllData[index]._id;
-        let newdate=document.getElementById("event-date").value
-        let newstart_time=document.getElementById("start-time").value
-        let newend_time=document.getElementById("end-time").value
+    async function updateModal(){
+        const id=AllData[indexvalue]._id;
+        console.log(id)
+        let newdate=document.getElementById(`event-date${indexvalue}`).value
+        let newstart_time=document.getElementById(`start-time${indexvalue}`).value
+        let newend_time=document.getElementById(`end-time${indexvalue}`).value
 
         var eventCardArea = document.querySelector(".event_card_area");
 
@@ -297,14 +299,15 @@
     }
 
     function closeModal() {
-        var modal = document.getElementById("modal");
+        var modal = document.getElementById(`modal${indexvalue}`);
         modal.style.display = "none";
     }
 
 
 
     function editEvent(index) {
-        console.log(index)
+        indexvalue=index
+        openModal()
     }
 
     async function deleteEvent(index) {
