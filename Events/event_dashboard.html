@@ -196,7 +196,6 @@
             if (data.message = "welcome to event route") {
                 mapData(data.data)
                 AllData=data.data
-                console.log(data.data)
             }
             else {
                 alert("Something wrong please try again")
@@ -326,6 +325,9 @@
     async function deleteEvent(index) {
         const id=AllData[index]._id;
         var eventCardArea = document.querySelector(".event_card_area");
+   
+
+        if(confirm("You want to delete this data") == true){
 
 
 
@@ -351,7 +353,7 @@
         catch (err) {
             console.log(err)
         }
-        
+    }
     }
 
     function previewEvent(index) {

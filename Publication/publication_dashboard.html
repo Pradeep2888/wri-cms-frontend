@@ -240,6 +240,8 @@
         var eventCardArea = document.querySelector(".event_card_area");
 
 
+        if(confirm("You want to delete this data") == true){
+
 
         try {
             let res = await fetch(`http://localhost:8000/publication/delete/${id}`, {
@@ -263,6 +265,7 @@
         catch (err) {
             console.log(err)
         }
+    }
         
     }
 
