@@ -961,10 +961,9 @@ else{
           var width = this.width;
           var height = this.height;
 
-          if (width !== 206 && height !== 372) {
-            // replace 500 with your desired width and height
+          if (height !== 206 && width !== 372) {
             alert(
-              `The image size must be 372x206! and this image height is ${height} and width is ${width} `
+              `The image size must be 372x206! and this image width is ${width} and height is ${height} `
             );
             e.target.value = "";
           }
