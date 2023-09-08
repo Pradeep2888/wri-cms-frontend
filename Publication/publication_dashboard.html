@@ -114,12 +114,27 @@
         }
         table{
             margin-top: 1rem;
-            border: 1px solid black;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        thead{
+            background-color: #306C63;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+        }
+        thead>tr>td{
+            padding: 1rem 2px;
+        }
+        tbody>tr>td{
+            padding: 10px 2px;
+            
+        }
+        tbody>tr,tbody>tr>td {
+          border: 1px solid black;
+
         }
 
-        tr,td{
-            border: 1px solid black;
-        }
      
     </style>
 </head>
@@ -137,7 +152,21 @@
             </div>
         </div>
     </nav>
-    <section class="event_card_area">
+    <section >
+        <table>
+            <thead>
+                <tr>
+                <td>S.No</td>
+                <td>Publication Id</td>
+                <td>Heading</td>
+                <td>Delete</td>
+                <td>Preview</td>
+                </tr>
+            </thead>
+            <tbody class="event_card_area">
+
+            </tbody>
+            <table
       
     </section>
 
@@ -188,26 +217,16 @@
         data.forEach((value, index) => {
             const newCard = `
         
-            <table>
-        <thead>
+           
+ 
             <tr>
-            <td>S.No</td>
-            <td>Heading</td>
-            <td>Article Id</td>
-            <td>Delete</td>
-            <td>Preview</td>
+            <td class="serial1" >${index+1}</td>
+            <td class="serial3" >${value._id}</td>
+            <td class="serial2" >${value.heading}</td>
+            <td class="serial4" > <button class="action-button delete-button" onclick="deleteEvent(${index})">Delete</button></td>
+            <td class="serial5" ><button class="action-button" onclick="previewEvent(${index})">Preview</button></td>
             </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <td>${index+1}</td>
-            <td>${value.heading}</td>
-            <td>${value._id}</td>
-            <td> <button class="action-button delete-button" onclick="deleteEvent(${index})">Delete</button></td>
-            <td><button class="action-button" onclick="previewEvent(${index})">Preview</button></td>
-            </tr>
-        </tbody>
-       </table>
+       
         `;
 
             eventCardArea.innerHTML += newCard;
