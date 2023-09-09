@@ -261,7 +261,24 @@
     }
 
     function publishEvent(index) {
-        console.log(index)
+        let id=AllData[index]._id
+
+    fetch(`http://localhost:8000/podcast/publish/${id}`, {
+      method: "PATCH",
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result)
+        if (result.message === "Data publish Successfully") {
+          alert("Data publish Successfully");
+        } else {
+          alert("Some thing went Wrong Please Try Again");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+
     }
 </script>
 
