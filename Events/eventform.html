@@ -209,11 +209,14 @@
     <div class="state">
       <h2 class="form-title">Event Filter By type</h2>
       <div class="form-group">
-        <label for="state_select">Select Event Type       :</label>
+        <label for="state_select">Select Event Type :</label>
         <select name="event" id="event_filter">
-          <option value="Agricultural Transitions">Agricultural Transitions</option>
-          <option value="Industrial and Commercial Transitions">Industrial and Commercial Transitions</option>
-          <option value="Residential Transition">Residential Transition</option>
+          <option value="">Select Field</option>
+          <option value="Integrated Resource Planning">Integrated Resource Planning</option>
+          <option value="Deploying Innovative and clean Technologies">Deploying Innovative and clean Technologies</option>
+          <option value="Commercial & Industrial Transition">Commercial & Industrial Transition</option>
+          <option value="Sustainable Utility Practices">Sustainable Utility Practices </option>
+          <option value="Energy Transition in Cities">Energy Transition in Cities</option>
         </select>
       </div>
     </div>
@@ -263,7 +266,7 @@
           <tr>
             <td><input type="text" name="name"></td>
             <td><input type="email" name="email"></td>
-            <td><input type="number" name="phone"></td>
+            <td><input type="text" name="phone"></td>
             <td><button class="btn" onclick="deleteRow(this)">Delete</button></td>
           </tr>
         </tbody>

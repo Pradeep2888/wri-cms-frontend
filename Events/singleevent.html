@@ -370,7 +370,7 @@
           </div>
 
           <div class="download_agenda">
-            <a class="download_agenda" target="_blank">
+            <a class="download_agenda1" target="_blank" style="width: 100%;">
               <button class="single_event_download_agenda">
                 <div>
                   <p>Download Agenda</p>
@@ -560,7 +560,7 @@
         let data = await res.json();
         if ((data.message = "welcome to event route")) {
           mapData(data.data);
-          console.log(data.data);
+          // console.log(data.data);
         } else {
           alert("Something wrong please try again");
         }
@@ -843,8 +843,6 @@
       paragraph.insertAdjacentHTML("beforeend", newPara);
     });
 
-    console.log(data.report_url[0]==="")
-
     let report_url = document.getElementsByClassName("report_url")[0];
     if (data.report_url[0] === "") {
       let r = document.getElementsByClassName("single_event_body_vedio_heading");
@@ -859,8 +857,9 @@
     }
 
     let video_url = document.getElementsByClassName("video_url")[0];
-    if(data.video_url.length===0){
+    if(data.video_url[0]===""){
       let v = document.getElementsByClassName("single_event_body_vedio_heading_link");
+      console.log(v[0])
       v[0].style.display = "none";
     }
     else{
@@ -875,7 +874,7 @@
     }
   
 
-    if(data.video_url.length!==0){
+    if(data.video_url[0]!==""){
       let video_box = document.getElementsByClassName(
       "single_event_body_vedio"
     )[0];
@@ -982,16 +981,18 @@
 
     if(data.agenda_url===""){
     document.getElementsByClassName("download_agenda")[0].style.display="none"
-    document.getElementsByClassName("horizontal_line")[0].style.display="none"
+    
     }
+    
     else{
-      let agenda_url = document.getElementsByClassName("download_agenda")[0];
-    agenda_url.href = data.agenda_url;
+      let agenda_url = document.getElementsByClassName("download_agenda1")[0];
+      agenda_url.href = data.agenda_url;
 
     }
      
 
     if(data.event_manager.length===0){
+      document.getElementsByClassName("horizontal_line")[0].style.display="none"
       document.getElementsByClassName("single_event_body_row2_inquery")[0].style.display="none"
     document.getElementsByClassName("single_event_body_row2_mail_box")[0].style.display="none"
     }
@@ -1052,7 +1053,7 @@
           var width = this.width;
           var height = this.height;
 
-          if (height!== 219 && width !== 389) {
+          if ( width !== 389 && height!== 219) {
       
             alert(
               `The image size must be 389x219! and this image width is ${width} and height is ${height} `

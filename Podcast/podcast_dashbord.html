@@ -112,14 +112,27 @@
             margin-top: -1rem;
             color: rgb(241, 9, 191);
         }
-        table{
-            margin-top: 1rem;
-            border: 1px solid black;
-        }
-
-        tr,td{
-            border: 1px solid black;
-        }
+        table {
+        margin-top: 1rem;
+        width: 100%;
+        border-collapse: collapse;
+      }
+      thead {
+        background-color: #306c63;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+      }
+      thead > tr > td {
+        padding: 1rem 2px;
+      }
+      tbody > tr > td {
+        padding: 10px 2px;
+      }
+      tbody > tr,
+      tbody > tr > td {
+        border: 1px solid black;
+      }
      
     </style>
 </head>
@@ -137,8 +150,19 @@
             </div>
         </div>
     </nav>
-    <section class="event_card_area">
-      
+    <section >
+        <table>
+            <thead>
+                <tr>
+                <td>S.No</td>
+                <td>Heading</td>
+                <td>Podcast Id</td>
+                <td>Delete</td>
+                <td>Publish</td>
+                </tr>
+            </thead>
+            <tbody class="event_card_area"></tbody>
+        </table>
     </section>
 
 </body>
@@ -188,26 +212,14 @@
         data.forEach((value, index) => {
             const newCard = `
         
-            <table>
-        <thead>
-            <tr>
-            <td>S.No</td>
-            <td>Heading</td>
-            <td>Article Id</td>
-            <td>Delete</td>
-            <td>Preview</td>
-            </tr>
-        </thead>
-        <tbody>
+        
             <tr>
             <td>${index+1}</td>
-            <td>${value.heading}</td>
+            <td>${value.episod_name}</td>
             <td>${value._id}</td>
             <td> <button class="action-button delete-button" onclick="deleteEvent(${index})">Delete</button></td>
-            <td><button class="action-button" onclick="previewEvent(${index})">Preview</button></td>
+            <td><button class="action-button" onclick="publishEvent(${index})">Publish</button></td>
             </tr>
-        </tbody>
-       </table>
         `;
 
             eventCardArea.innerHTML += newCard;
@@ -220,7 +232,7 @@
         const id=AllData[index]._id;
         var eventCardArea = document.querySelector(".event_card_area");
 
-
+        if (confirm("You want to delete this data") == true) {
 
         try {
             let res = await fetch(`http://localhost:8000/podcast/delete/${id}`, {
@@ -244,14 +256,12 @@
         catch (err) {
             console.log(err)
         }
+    }
         
     }
 
-    function previewEvent(index) {
-        let token=JSON.parse(localStorage.getItem("singlepodcast")) || ""
-        const id=AllData[index]._id;
-        localStorage.setItem("singlepodcast",JSON.stringify(id))
-        window.location.href="./single_podcast.html"
+    function publishEvent(index) {
+        console.log(index)
     }
 </script>
 
