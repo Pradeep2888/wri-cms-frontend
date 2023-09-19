@@ -560,7 +560,7 @@
         let data = await res.json();
         if ((data.message = "welcome to event route")) {
           mapData(data.data);
-          // console.log(data.data);
+          console.log(data.data);
         } else {
           alert("Something wrong please try again");
         }
@@ -970,7 +970,7 @@
 
 
     let image = document.getElementsByClassName("image_container")[0];
-    if (data.image_url) {
+    if (data.image_url!=="") {
       let newImage = `<p ></p>`;
       image.innerHTML = newImage;
     } else {
