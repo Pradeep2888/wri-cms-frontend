@@ -247,6 +247,8 @@
       <input type="number" class="form-input number">
       <label for="event_name" class="form-label">Episode Name</label>
       <input type="text" class="form-input name">
+      <label for="event_name" class="form-label">Episode Title</label>
+      <input type="text" class="form-input title">
       <label for="episod_url" class="form-label">Episode URL</label>
       <input type="url" class="form-input url">
     </div>
@@ -277,6 +279,7 @@
 
     const episod = document.getElementsByClassName("number")[0].value
     const name = document.getElementsByClassName("name")[0].value
+    const title = document.getElementsByClassName("title")[0].value
     const url = document.getElementsByClassName("url")[0].value
     const stateselect = document.getElementById("state_select").value
     const podcastfilter = document.getElementById("podcast_filter").value
@@ -284,6 +287,7 @@
     let finalObj = {
       "episod_number":episod,
       "episod_name": name,
+      "episod_title": title,
       "episod_url": url,
       "state": stateselect,
       "podcast_filter": podcastfilter
