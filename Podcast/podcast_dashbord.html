@@ -190,6 +190,7 @@
             let data = await res.json()
             if (data.message = "welcome to event route") {
                 mapData(data.data)
+                console.log(data.data)
                 AllData=data.data
             }
             else {
